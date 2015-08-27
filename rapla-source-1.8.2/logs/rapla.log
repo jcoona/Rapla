@@ -1,0 +1,110 @@
+15:58:33.785 266  [main] INFO  org.eclipse.jetty.server.Server - jetty-8.1.16.v20140903
+15:58:33.825 306  [main] INFO  o.e.j.d.p.ScanningAppProvider - Deployment monitor C:\Users\kcs11006\Downloads\rapla-source-1.8.2\contexts at interval 1
+15:58:33.829 310  [main] INFO  o.e.jetty.deploy.DeploymentManager - Deployable added: C:\Users\kcs11006\Downloads\rapla-source-1.8.2\contexts\rapla-develop.xml
+15:58:34.030 511  [main] INFO  rapla - Init RaplaServlet
+15:58:34.032 513  [main] INFO  rapla - Passed JNDI Environment rapladatasource=raplafile env_rapladb=org.hsqldb.jdbc.JDBCDataSource@29626d54 env_raplafile=C:\Users\kcs11006\Downloads\rapla-source-1.8.2/data/data.xml
+15:58:34.036 517  [main] INFO  rapla - Logging via SLF4J API.
+15:58:34.061 542  [main] INFO  rapla - Configured Locale= en_US
+15:58:34.170 651  [main] INFO  rapla - Config=file:/C:/Users/kcs11006/Downloads/rapla-source-1.8.2/war/WEB-INF/raplaserver.xconf
+15:58:34.170 651  [main] INFO  rapla - Rapla.Version=@doc.version@
+15:58:34.171 652  [main] INFO  rapla - Rapla.Build=@doc.buildtime@
+15:58:34.171 652  [main] INFO  rapla - Timezone America/New_York
+15:58:34.176 657  [main] INFO  rapla - Java.Version=1.8.0_51
+15:58:34.226 707  [main] INFO  rapla.server.serverfacade - Using rapladatasource raplafile
+15:58:34.242 723  [main] INFO  rapla.raplafile - Connecting: file:/C:/Users/kcs11006/Downloads/rapla-source-1.8.2/data/data.xml
+15:58:34.261 742  [main] WARN  rapla.raplafile - Data file not found file:/C:/Users/kcs11006/Downloads/rapla-source-1.8.2/data/data.xml creating default system.
+15:58:39.276 5757 [main] INFO  rapla.raplafile - Conflict initialization found 0 conflicts and took 0ms. 
+15:58:39.278 5759 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.weekview.server.WeekViewServerPlugin
+15:58:39.279 5760 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.urlencryption.server.UrlEncryptionServerPlugin
+15:58:39.279 5760 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.timeslot.server.TimeslotServerPlugin
+15:58:39.279 5760 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.tableview.internal.server.TableViewServerPlugin
+15:58:39.280 5761 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.notification.server.NotificationServerPlugin
+15:58:39.280 5761 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.monthview.server.MonthViewServerPlugin
+15:58:39.280 5761 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.mail.server.MailServerPlugin
+15:58:39.280 5761 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.jndi.server.JNDIServerPlugin
+15:58:39.281 5762 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.ical.server.ImportFromICalServerPlugin
+15:58:39.281 5762 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.export2ical.server.Export2iCalServerPlugin
+15:58:39.281 5762 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.eventtimecalculator.server.EventTimeCalculatorServerPlugin
+15:58:39.281 5762 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.dayresource.server.DayResourceViewServerPlugin
+15:58:39.282 5763 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.compactweekview.server.CompactWeekViewServerPlugin
+15:58:39.282 5763 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.autoexport.server.AutoExportServerPlugin
+15:58:39.282 5763 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.archiver.server.ArchiverServerPlugin
+15:58:39.286 5767 [main] INFO  rapla.server - Generating new root key. This can take a while.
+15:58:39.855 6336 [main] INFO  rapla.server - Root key generated
+15:58:39.869 6350 [main] INFO  rapla.raplafile - Creating directory C:\Users\kcs11006\Downloads\rapla-source-1.8.2\data
+15:58:40.082 6563 [main] INFO  rapla - Rapla server started
+15:58:40.092 6573 [main] INFO  rapla.client - Starting gui 
+15:58:40.114 6595 [main] INFO  rapla.client.facade - Using rapladatasource remotestore
+15:58:40.124 6605 [main] INFO  rapla.remotestore - Connecting to server and starting login..
+15:58:40.125 6606 [main] INFO  rapla.remotestore - login successfull
+15:58:40.126 6607 [main] INFO  rapla.client.facade - Login admin
+15:58:40.129 6610 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+15:58:40.129 6610 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+15:58:40.129 6610 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+15:58:40.130 6611 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.tempatewizard.TempateWizardPlugin
+15:58:40.130 6611 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+15:58:40.130 6611 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+15:58:40.130 6611 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.rightsreport.RightsReportPlugin
+15:58:40.130 6611 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+15:58:40.131 6612 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.notification.NotificationPlugin
+15:58:40.131 6612 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+15:58:40.131 6612 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.mail.MailPlugin
+15:58:40.131 6612 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+15:58:40.131 6612 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.ical.ImportFromICalPlugin
+15:58:40.132 6613 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+15:58:40.132 6613 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+15:58:40.132 6613 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+15:58:40.132 6613 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+15:58:40.132 6613 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+15:58:40.132 6613 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+15:58:40.133 6614 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+15:58:40.133 6614 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
+15:58:53.188 19669 [AWT-EventQueue-0] INFO  rapla.client.facade - Logout u405db03-812f-4ff7-b52c-5423a7951cf4
+15:58:53.189 19670 [AWT-EventQueue-0] INFO  rapla.remotestore - Disconnecting from server
+15:58:53.189 19670 [AWT-EventQueue-0] INFO  rapla.server.session.login - Request Logout admin
+15:58:53.194 19675 [main] INFO  rapla - Shutting down rapla-container
+15:58:53.194 19675 [main] INFO  rapla - Stopping scheduler thread.
+15:58:53.195 19676 [main] INFO  rapla - Stopped scheduler thread.
+15:58:53.245 19726 [main] INFO  rapla.raplafile - Disconnecting: file:/C:/Users/kcs11006/Downloads/rapla-source-1.8.2/data/data.xml
+15:58:53.245 19726 [main] INFO  rapla.server - Storage service stopped
+15:58:58.327 24808 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.w.WebAppContext{/,[file:/C:/Users/kcs11006/Downloads/rapla-source-1.8.2/war/]}
+15:58:58.328 24809 [SeedGenerator Thread] ERROR rapla.client - uncaught exception
+java.lang.ThreadDeath: null
+	at java.lang.Thread.stop(Unknown Source) ~[na:1.8.0_51]
+	at se.jiderhamn.classloader.leak.prevention.ClassLoaderLeakPreventor.stopThreads(ClassLoaderLeakPreventor.java:915) ~[eclipse-build/:na]
+	at se.jiderhamn.classloader.leak.prevention.ClassLoaderLeakPreventor.contextDestroyed(ClassLoaderLeakPreventor.java:426) ~[eclipse-build/:na]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStop(ContextHandler.java:823) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStop(ServletContextHandler.java:160) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.webapp.WebAppContext.doStop(WebAppContext.java:518) ~[jetty-webapp-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.HandlerCollection.doStop(HandlerCollection.java:250) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.HandlerCollection.doStop(HandlerCollection.java:250) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStop(HandlerWrapper.java:107) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.Server.doStop(Server.java:343) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_51]
+	at org.rapla.bootstrap.CustomJettyStarter$2$1.invoke(CustomJettyStarter.java:278) ~[eclipse-build/:na]
+	at com.sun.proxy.$Proxy0.lifeCycleStarted(Unknown Source) ~[na:na]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.setStarted(AbstractLifeCycle.java:174) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:65) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_51]
+	at org.rapla.bootstrap.CustomJettyStarter$2.run(CustomJettyStarter.java:339) ~[eclipse-build/:na]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_51]
+	at org.rapla.bootstrap.CustomJettyStarter.start(CustomJettyStarter.java:193) ~[eclipse-build/:na]
+	at org.rapla.bootstrap.CustomJettyStarter.main(CustomJettyStarter.java:53) ~[eclipse-build/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_51]
+	at org.rapla.bootstrap.RaplaLoader.startMain(RaplaLoader.java:135) ~[eclipse-build/:na]
+	at org.rapla.bootstrap.RaplaLoader.start(RaplaLoader.java:99) ~[eclipse-build/:na]
+	at org.rapla.bootstrap.RaplaJettyLoader.main(RaplaJettyLoader.java:30) ~[eclipse-build/:na]
+	at org.rapla.bootstrap.RaplaStandaloneLoader.main(RaplaStandaloneLoader.java:17) ~[eclipse-build/:na]
