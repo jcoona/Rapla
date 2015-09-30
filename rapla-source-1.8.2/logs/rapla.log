@@ -108,3 +108,339 @@ java.lang.ThreadDeath: null
 	at org.rapla.bootstrap.RaplaLoader.start(RaplaLoader.java:99) ~[eclipse-build/:na]
 	at org.rapla.bootstrap.RaplaJettyLoader.main(RaplaJettyLoader.java:30) ~[eclipse-build/:na]
 	at org.rapla.bootstrap.RaplaStandaloneLoader.main(RaplaStandaloneLoader.java:17) ~[eclipse-build/:na]
+15:42:00.911 254  [main] INFO  org.eclipse.jetty.server.Server - jetty-8.1.16.v20140903
+15:42:00.943 286  [main] INFO  o.e.j.d.p.ScanningAppProvider - Deployment monitor C:\Program Files\Cadence\SPB_Data\git\CSE2102-Fall2015-Claxton-Jackson\rapla-source-1.8.2\contexts at interval 1
+15:42:00.946 289  [main] INFO  o.e.jetty.deploy.DeploymentManager - Deployable added: C:\Program Files\Cadence\SPB_Data\git\CSE2102-Fall2015-Claxton-Jackson\rapla-source-1.8.2\contexts\rapla-develop.xml
+15:42:01.126 469  [main] INFO  rapla - Init RaplaServlet
+15:42:01.128 471  [main] INFO  rapla - Passed JNDI Environment rapladatasource=raplafile env_rapladb=org.hsqldb.jdbc.JDBCDataSource@29626d54 env_raplafile=C:\Program Files\Cadence\SPB_Data\git\CSE2102-Fall2015-Claxton-Jackson\rapla-source-1.8.2/data/data.xml
+15:42:01.134 477  [main] INFO  rapla - Logging via SLF4J API.
+15:42:01.158 501  [main] INFO  rapla - Configured Locale= en_US
+15:42:01.247 590  [main] INFO  rapla - Config=file:/C:/Program%20Files/Cadence/SPB_Data/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/war/WEB-INF/raplaserver.xconf
+15:42:01.248 591  [main] INFO  rapla - Rapla.Version=@doc.version@
+15:42:01.248 591  [main] INFO  rapla - Rapla.Build=@doc.buildtime@
+15:42:01.248 591  [main] INFO  rapla - Timezone America/New_York
+15:42:01.252 595  [main] INFO  rapla - Java.Version=1.8.0_51
+15:42:01.293 636  [main] INFO  rapla.server.serverfacade - Using rapladatasource raplafile
+15:42:01.307 650  [main] INFO  rapla.raplafile - Connecting: file:/C:/Program%20Files/Cadence/SPB_Data/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/data/data.xml
+15:42:06.340 5683 [main] INFO  rapla.raplafile - Conflict initialization found 0 conflicts and took 0ms. 
+15:42:06.342 5685 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.weekview.server.WeekViewServerPlugin
+15:42:06.342 5685 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.urlencryption.server.UrlEncryptionServerPlugin
+15:42:06.343 5686 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.timeslot.server.TimeslotServerPlugin
+15:42:06.343 5686 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.tableview.internal.server.TableViewServerPlugin
+15:42:06.343 5686 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.notification.server.NotificationServerPlugin
+15:42:06.343 5686 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.monthview.server.MonthViewServerPlugin
+15:42:06.344 5687 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.mail.server.MailServerPlugin
+15:42:06.344 5687 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.jndi.server.JNDIServerPlugin
+15:42:06.344 5687 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.ical.server.ImportFromICalServerPlugin
+15:42:06.344 5687 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.export2ical.server.Export2iCalServerPlugin
+15:42:06.345 5688 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.eventtimecalculator.server.EventTimeCalculatorServerPlugin
+15:42:06.345 5688 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.dayresource.server.DayResourceViewServerPlugin
+15:42:06.345 5688 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.compactweekview.server.CompactWeekViewServerPlugin
+15:42:06.345 5688 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.autoexport.server.AutoExportServerPlugin
+15:42:06.346 5689 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.archiver.server.ArchiverServerPlugin
+15:42:06.522 5865 [main] INFO  rapla - Rapla server started
+15:42:06.530 5873 [main] INFO  rapla.client - Starting gui 
+15:42:06.549 5892 [main] INFO  rapla.client.facade - Using rapladatasource remotestore
+15:42:06.558 5901 [main] INFO  rapla.remotestore - Connecting to server and starting login..
+15:42:06.559 5902 [main] INFO  rapla.remotestore - login successfull
+15:42:06.570 5913 [main] INFO  rapla.client.facade - Login admin
+15:42:06.575 5918 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+15:42:06.575 5918 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+15:42:06.576 5919 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+15:42:06.576 5919 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.tempatewizard.TempateWizardPlugin
+15:42:06.576 5919 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+15:42:06.576 5919 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+15:42:06.577 5920 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.rightsreport.RightsReportPlugin
+15:42:06.577 5920 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+15:42:06.577 5920 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.notification.NotificationPlugin
+15:42:06.577 5920 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+15:42:06.577 5920 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.mail.MailPlugin
+15:42:06.578 5921 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+15:42:06.578 5921 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.ical.ImportFromICalPlugin
+15:42:06.578 5921 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+15:42:06.578 5921 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+15:42:06.578 5921 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+15:42:06.579 5922 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+15:42:06.579 5922 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+15:42:06.579 5922 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+15:42:06.579 5922 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+15:42:06.579 5922 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
+15:47:56.572 355915 [AWT-EventQueue-0] ERROR rapla.client - uncaught exception
+java.lang.NullPointerException: null
+	at org.rapla.gui.internal.edit.DeleteUndo.<init>(DeleteUndo.java:33) ~[eclipse-build/:na]
+	at org.rapla.gui.internal.edit.reservation.ReservationControllerImpl$DeleteBlocksCommand.<init>(ReservationControllerImpl.java:232) ~[eclipse-build/:na]
+	at org.rapla.gui.internal.edit.reservation.ReservationEditImpl$4.<init>(ReservationEditImpl.java:600) ~[eclipse-build/:na]
+	at org.rapla.gui.internal.edit.reservation.ReservationEditImpl.delete(ReservationEditImpl.java:600) ~[eclipse-build/:na]
+	at org.rapla.gui.internal.edit.reservation.ReservationEditImpl$Listener.actionPerformed(ReservationEditImpl.java:516) ~[eclipse-build/:na]
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source) ~[na:1.8.0_51]
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source) ~[na:1.8.0_51]
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source) ~[na:1.8.0_51]
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source) ~[na:1.8.0_51]
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.Component.processMouseEvent(Unknown Source) ~[na:1.8.0_51]
+	at javax.swing.JComponent.processMouseEvent(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.Component.processEvent(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.Container.processEvent(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.Component.dispatchEventImpl(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.Container.dispatchEventImpl(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.Component.dispatchEvent(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.Container.dispatchEventImpl(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.Window.dispatchEventImpl(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.Component.dispatchEvent(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.EventQueue.access$500(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.EventQueue$3.run(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.EventQueue$3.run(Unknown Source) ~[na:1.8.0_51]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_51]
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source) ~[na:1.8.0_51]
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.EventQueue$4.run(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.EventQueue$4.run(Unknown Source) ~[na:1.8.0_51]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_51]
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.EventQueue.dispatchEvent(Unknown Source) ~[na:1.8.0_51]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source) [na:1.8.0_51]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source) [na:1.8.0_51]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source) [na:1.8.0_51]
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source) [na:1.8.0_51]
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source) [na:1.8.0_51]
+	at java.awt.EventDispatchThread.run(Unknown Source) [na:1.8.0_51]
+15:48:32.417 391760 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:48:32.452 391795 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:48:43.454 402797 [AWT-EventQueue-0] INFO  rapla.raplafile - Change password for User clj13001
+15:49:18.063 437406 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:49:18.078 437421 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:49:32.199 451542 [AWT-EventQueue-0] INFO  rapla.raplafile - Change password for User superman
+15:51:51.271 590614 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:51:51.286 590629 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:52:06.975 606318 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:52:06.989 606332 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:53:15.369 674712 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:53:15.393 674736 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:54:19.286 738629 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:54:19.303 738646 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:55:03.318 782661 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:55:03.334 782677 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:55:16.935 796278 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:55:16.952 796295 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:55:42.206 821549 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:55:42.222 821565 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:56:03.534 842877 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:56:03.548 842891 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:56:26.903 866246 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:56:26.919 866262 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:56:54.406 893749 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:56:54.420 893763 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:57:08.790 908133 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:57:08.802 908145 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:57:28.982 928325 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:57:28.991 928334 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+15:59:38.197 1057540 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+15:59:38.201 1057544 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:00:03.182 1082525 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:00:03.196 1082539 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:00:12.398 1091741 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:00:12.412 1091755 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:00:17.918 1097261 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:00:17.928 1097271 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:00:24.789 1104132 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:00:24.793 1104136 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:00:37.414 1116757 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:00:37.418 1116761 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:01:49.079 1188422 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:01:49.093 1188436 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:01:54.838 1194181 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:01:54.851 1194194 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:02:13.358 1212701 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:02:13.369 1212712 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:02:22.318 1221661 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:02:22.332 1221675 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:02:28.446 1227789 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:02:28.459 1227802 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:07:14.366 1513709 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:07:14.374 1513717 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:07:31.343 1530686 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:07:31.357 1530700 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:07:48.615 1547958 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:07:48.630 1547973 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:08:04.128 1563471 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:08:04.141 1563484 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:11:01.542 1740885 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:11:01.548 1740891 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:11:23.424 1762767 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:11:23.439 1762782 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:11:40.527 1779870 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:11:40.540 1779883 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:11:46.311 1785654 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:11:46.327 1785670 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:12:56.431 1855774 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:12:56.445 1855788 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:13:06.647 1865990 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:13:06.661 1866004 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:13:32.517 1891860 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:13:32.540 1891883 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:14:31.214 1950557 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:14:31.229 1950572 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:14:46.317 1965660 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:14:46.333 1965676 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:14:57.013 1976356 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+16:14:57.028 1976371 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+16:15:36.063 2015406 [AWT-EventQueue-0] INFO  rapla.client.facade - Logout u405db03-812f-4ff7-b52c-5423a7951cf4
+16:15:36.063 2015406 [AWT-EventQueue-0] INFO  rapla.remotestore - Disconnecting from server
+16:15:36.063 2015406 [AWT-EventQueue-0] INFO  rapla.server.session.login - Request Logout admin
+16:15:36.067 2015410 [main] INFO  rapla - Shutting down rapla-container
+16:15:36.068 2015411 [main] INFO  rapla - Stopping scheduler thread.
+16:15:36.068 2015411 [main] WARN  rapla - Interrupted active task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@7098b907
+16:15:36.068 2015411 [main] INFO  rapla - Stopped scheduler thread.
+16:15:36.119 2015462 [main] INFO  rapla.raplafile - Disconnecting: file:/C:/Program%20Files/Cadence/SPB_Data/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/data/data.xml
+16:15:36.120 2015463 [main] INFO  rapla.server - Storage service stopped
+16:15:41.236 2020579 [SeedGenerator Thread] ERROR rapla.client - uncaught exception
+java.lang.ThreadDeath: null
+	at java.lang.Thread.stop(Unknown Source) ~[na:1.8.0_51]
+	at se.jiderhamn.classloader.leak.prevention.ClassLoaderLeakPreventor.stopThreads(ClassLoaderLeakPreventor.java:915) ~[eclipse-build/:na]
+	at se.jiderhamn.classloader.leak.prevention.ClassLoaderLeakPreventor.contextDestroyed(ClassLoaderLeakPreventor.java:426) ~[eclipse-build/:na]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStop(ContextHandler.java:823) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStop(ServletContextHandler.java:160) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.webapp.WebAppContext.doStop(WebAppContext.java:518) ~[jetty-webapp-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.HandlerCollection.doStop(HandlerCollection.java:250) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.HandlerCollection.doStop(HandlerCollection.java:250) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStop(HandlerWrapper.java:107) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.Server.doStop(Server.java:343) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_51]
+	at org.rapla.bootstrap.CustomJettyStarter$2$1.invoke(CustomJettyStarter.java:278) ~[eclipse-build/:na]
+	at com.sun.proxy.$Proxy0.lifeCycleStarted(Unknown Source) ~[na:na]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.setStarted(AbstractLifeCycle.java:174) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:65) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_51]
+	at org.rapla.bootstrap.CustomJettyStarter$2.run(CustomJettyStarter.java:339) ~[eclipse-build/:na]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_51]
+	at org.rapla.bootstrap.CustomJettyStarter.start(CustomJettyStarter.java:193) ~[eclipse-build/:na]
+	at org.rapla.bootstrap.CustomJettyStarter.main(CustomJettyStarter.java:53) ~[eclipse-build/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_51]
+	at org.rapla.bootstrap.RaplaLoader.startMain(RaplaLoader.java:135) ~[eclipse-build/:na]
+	at org.rapla.bootstrap.RaplaLoader.start(RaplaLoader.java:99) ~[eclipse-build/:na]
+	at org.rapla.bootstrap.RaplaJettyLoader.main(RaplaJettyLoader.java:30) ~[eclipse-build/:na]
+	at org.rapla.bootstrap.RaplaStandaloneLoader.main(RaplaStandaloneLoader.java:17) ~[eclipse-build/:na]
+16:15:41.246 2020589 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.w.WebAppContext{/,[file:/C:/Program%20Files/Cadence/SPB_Data/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/war/]}
+16:15:55.231 314  [main] INFO  org.eclipse.jetty.server.Server - jetty-8.1.16.v20140903
+16:15:55.269 352  [main] INFO  o.e.j.d.p.ScanningAppProvider - Deployment monitor C:\Program Files\Cadence\SPB_Data\git\CSE2102-Fall2015-Claxton-Jackson\rapla-source-1.8.2\contexts at interval 1
+16:15:55.272 355  [main] INFO  o.e.jetty.deploy.DeploymentManager - Deployable added: C:\Program Files\Cadence\SPB_Data\git\CSE2102-Fall2015-Claxton-Jackson\rapla-source-1.8.2\contexts\rapla-develop.xml
+16:15:55.525 608  [main] INFO  rapla - Init RaplaServlet
+16:15:55.527 610  [main] INFO  rapla - Passed JNDI Environment rapladatasource=raplafile env_rapladb=org.hsqldb.jdbc.JDBCDataSource@29626d54 env_raplafile=C:\Program Files\Cadence\SPB_Data\git\CSE2102-Fall2015-Claxton-Jackson\rapla-source-1.8.2/data/data.xml
+16:15:55.551 634  [main] INFO  rapla - Logging via SLF4J API.
+16:15:55.659 742  [main] INFO  rapla - Configured Locale= en_US
+16:15:55.844 927  [main] INFO  rapla - Config=file:/C:/Program%20Files/Cadence/SPB_Data/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/war/WEB-INF/raplaserver.xconf
+16:15:55.844 927  [main] INFO  rapla - Rapla.Version=@doc.version@
+16:15:55.844 927  [main] INFO  rapla - Rapla.Build=@doc.buildtime@
+16:15:55.845 928  [main] INFO  rapla - Timezone America/New_York
+16:15:55.880 963  [main] INFO  rapla - Java.Version=1.8.0_51
+16:15:55.969 1052 [main] INFO  rapla.server.serverfacade - Using rapladatasource raplafile
+16:15:56.053 1136 [main] INFO  rapla.raplafile - Connecting: file:/C:/Program%20Files/Cadence/SPB_Data/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/data/data.xml
+16:16:01.276 6359 [main] INFO  rapla.raplafile - Conflict initialization found 0 conflicts and took 10ms. 
+16:16:01.283 6366 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.weekview.server.WeekViewServerPlugin
+16:16:01.283 6366 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.urlencryption.server.UrlEncryptionServerPlugin
+16:16:01.284 6367 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.timeslot.server.TimeslotServerPlugin
+16:16:01.284 6367 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.tableview.internal.server.TableViewServerPlugin
+16:16:01.284 6367 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.notification.server.NotificationServerPlugin
+16:16:01.285 6368 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.monthview.server.MonthViewServerPlugin
+16:16:01.285 6368 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.mail.server.MailServerPlugin
+16:16:01.285 6368 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.jndi.server.JNDIServerPlugin
+16:16:01.286 6369 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.ical.server.ImportFromICalServerPlugin
+16:16:01.286 6369 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.export2ical.server.Export2iCalServerPlugin
+16:16:01.286 6369 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.eventtimecalculator.server.EventTimeCalculatorServerPlugin
+16:16:01.286 6369 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.dayresource.server.DayResourceViewServerPlugin
+16:16:01.287 6370 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.compactweekview.server.CompactWeekViewServerPlugin
+16:16:01.287 6370 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.autoexport.server.AutoExportServerPlugin
+16:16:01.287 6370 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.archiver.server.ArchiverServerPlugin
+16:16:01.550 6633 [main] INFO  rapla - Rapla server started
+16:16:01.575 6658 [main] INFO  rapla.client - Starting gui 
+16:16:01.678 6761 [main] INFO  rapla.client.facade - Using rapladatasource remotestore
+16:16:01.700 6783 [main] INFO  rapla.remotestore - Connecting to server and starting login..
+16:16:01.705 6788 [main] INFO  rapla.remotestore - login successfull
+16:16:01.715 6798 [main] INFO  rapla.client.facade - Login admin
+16:16:01.725 6808 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+16:16:01.725 6808 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+16:16:01.726 6809 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+16:16:01.726 6809 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.tempatewizard.TempateWizardPlugin
+16:16:01.726 6809 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+16:16:01.726 6809 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+16:16:01.727 6810 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.rightsreport.RightsReportPlugin
+16:16:01.727 6810 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+16:16:01.727 6810 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.notification.NotificationPlugin
+16:16:01.727 6810 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+16:16:01.727 6810 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.mail.MailPlugin
+16:16:01.728 6811 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+16:16:01.728 6811 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.ical.ImportFromICalPlugin
+16:16:01.728 6811 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+16:16:01.728 6811 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+16:16:01.728 6811 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+16:16:01.729 6812 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+16:16:01.729 6812 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+16:16:01.729 6812 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+16:16:01.729 6812 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+16:16:01.729 6812 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
+16:20:29.781 274864 [AWT-EventQueue-0] INFO  rapla.client.facade - Logout u405db03-812f-4ff7-b52c-5423a7951cf4
+16:20:29.782 274865 [AWT-EventQueue-0] INFO  rapla.remotestore - Disconnecting from server
+16:20:29.782 274865 [AWT-EventQueue-0] INFO  rapla.server.session.login - Request Logout admin
+16:20:29.786 274869 [main] INFO  rapla - Shutting down rapla-container
+16:20:29.787 274870 [main] INFO  rapla - Stopping scheduler thread.
+16:20:29.787 274870 [main] INFO  rapla - Stopped scheduler thread.
+16:20:29.838 274921 [main] INFO  rapla.raplafile - Disconnecting: file:/C:/Program%20Files/Cadence/SPB_Data/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/data/data.xml
+16:20:29.839 274922 [main] INFO  rapla.server - Storage service stopped
+16:20:34.919 280002 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.w.WebAppContext{/,[file:/C:/Program%20Files/Cadence/SPB_Data/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/war/]}
+16:20:34.923 280006 [SeedGenerator Thread] ERROR rapla.client - uncaught exception
+java.lang.ThreadDeath: null
+	at java.lang.Thread.stop(Unknown Source) ~[na:1.8.0_51]
+	at se.jiderhamn.classloader.leak.prevention.ClassLoaderLeakPreventor.stopThreads(ClassLoaderLeakPreventor.java:915) ~[eclipse-build/:na]
+	at se.jiderhamn.classloader.leak.prevention.ClassLoaderLeakPreventor.contextDestroyed(ClassLoaderLeakPreventor.java:426) ~[eclipse-build/:na]
+	at org.eclipse.jetty.server.handler.ContextHandler.doStop(ContextHandler.java:823) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStop(ServletContextHandler.java:160) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.webapp.WebAppContext.doStop(WebAppContext.java:518) ~[jetty-webapp-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.HandlerCollection.doStop(HandlerCollection.java:250) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.HandlerCollection.doStop(HandlerCollection.java:250) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStop(HandlerWrapper.java:107) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.Server.doStop(Server.java:343) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_51]
+	at org.rapla.bootstrap.CustomJettyStarter$2$1.invoke(CustomJettyStarter.java:278) ~[eclipse-build/:na]
+	at com.sun.proxy.$Proxy0.lifeCycleStarted(Unknown Source) ~[na:na]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.setStarted(AbstractLifeCycle.java:174) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:65) ~[jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_51]
+	at org.rapla.bootstrap.CustomJettyStarter$2.run(CustomJettyStarter.java:339) ~[eclipse-build/:na]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_51]
+	at org.rapla.bootstrap.CustomJettyStarter.start(CustomJettyStarter.java:193) ~[eclipse-build/:na]
+	at org.rapla.bootstrap.CustomJettyStarter.main(CustomJettyStarter.java:53) ~[eclipse-build/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_51]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_51]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_51]
+	at org.rapla.bootstrap.RaplaLoader.startMain(RaplaLoader.java:135) ~[eclipse-build/:na]
+	at org.rapla.bootstrap.RaplaLoader.start(RaplaLoader.java:99) ~[eclipse-build/:na]
+	at org.rapla.bootstrap.RaplaJettyLoader.main(RaplaJettyLoader.java:30) ~[eclipse-build/:na]
+	at org.rapla.bootstrap.RaplaStandaloneLoader.main(RaplaStandaloneLoader.java:17) ~[eclipse-build/:na]
