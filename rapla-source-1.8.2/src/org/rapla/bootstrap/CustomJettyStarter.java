@@ -178,7 +178,7 @@ public class CustomJettyStarter
 		{
 			LoadingProgressC = loader.loadClass("org.rapla.bootstrap.LoadingProgress");
 			progressBar = LoadingProgressC.getMethod("getInstance").invoke(null);
-			LoadingProgressC.getMethod("start", int.class, int.class).invoke( progressBar, 1,4);
+			LoadingProgressC.getMethod("start", int.class, int.class).invoke( progressBar, 1,4); //makes loading image popup
 		}
         else
         {

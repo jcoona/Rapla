@@ -2,7 +2,12 @@ package org.rapla.bootstrap;
 
 import java.io.File;
 import java.io.IOException;
-
+/**
+ * Determines the location of the application files.
+ * Starts org.rapla.bootstrap.RaplaLoader
+ * @author Jackson
+ *
+ */
 
 public class RaplaJettyLoader 
 {
@@ -26,7 +31,7 @@ public class RaplaJettyLoader
         String methodName = "main";
         //System.setProperty( "java.awt.headless", "true" );
         String test = "Starting rapla from " + System.getProperty("jetty.home");
-        System.out.println(test );
+        System.out.println(test ); //Prints out the first message when you load application.
         RaplaLoader.start( baseDir,dirList, classname,methodName, new Object[] {args });
     }
     

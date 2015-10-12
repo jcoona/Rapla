@@ -1,7 +1,12 @@
 package org.rapla.bootstrap;
 
 import java.io.IOException;
-
+/**
+ * Class is used to start the Rapla application. 
+ * The main method starts up org.rapla.bootstrap.RaplaJettyLoader
+ * @author Jackson
+ *
+ */
 
 public class RaplaStandaloneLoader
 {
