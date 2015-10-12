@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?><!--*- coding: utf-8 -*-->
+<rapla:data xmlns:rapla="http://rapla.sourceforge.net/rapla"
+ xmlns:relax="http://relaxng.org/ns/structure/1.0"
+ xmlns:dynatt="http://rapla.sourceforge.net/dynamictype"
+ xmlns:ext="http://rapla.sourceforge.net/extension"
+ xmlns:doc="http://rapla.sourceforge.net/annotation"
+ version="1.2">
+   <rapla:categories>
+      <rapla:category created-at="2015-08-27T19:58:34.0261Z" last-changed="2015-08-27T19:58:34.0261Z" id="c09f89d7-02b8-4c00-aa4d-05b434234ba0" key="user-groups">
+         <doc:name lang="en">user-groups</doc:name>
+         <rapla:category created-at="2015-08-27T19:58:34.0261Z" last-changed="2015-08-27T19:58:34.0261Z" id="c8c0a899-684a-43b9-ae5a-71fcb86b8f47" key="read-events-from-others">
+            <doc:name lang="en">See events of other users</doc:name>
+         </rapla:category>
+         <rapla:category created-at="2015-08-27T19:58:34.0261Z" last-changed="2015-08-27T19:58:34.0261Z" id="cb6fa5d8-7d62-413d-b405-88eaf2096468" key="create-events">
+            <doc:name lang="en">create events</doc:name>
+         </rapla:category>
+      </rapla:category>
+   </rapla:categories>
+
+   <relax:grammar>
+      <relax:define name="resource">
+         <relax:element name="dynatt:resource" id="d1aedf95-9f97-437b-80d6-4584cec8b850" created-at="2015-08-27T19:58:39.0267Z" last-changed="2015-08-27T19:58:39.0267Z">
+            <doc:name lang="en">Resource</doc:name>
+            <doc:annotations>
+               <rapla:annotation key="nameformat">{name}</rapla:annotation>
+               <rapla:annotation key="classification-type">resource</rapla:annotation>
+               <rapla:annotation key="colors">automatic</rapla:annotation>
+            </doc:annotations>
+            <relax:element name="name">
+               <doc:name lang="en">Name</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <rapla:permission access="read_type"/>
+            <rapla:permission access="allocate_conflicts"/>
+         </relax:element>
+      </relax:define>
+
+      <relax:define name="person">
+         <relax:element name="dynatt:person" id="d931216a-522c-4f53-9d75-4fe3644226a3" created-at="2015-08-27T19:58:39.0267Z" last-changed="2015-08-27T19:58:39.0267Z">
+            <doc:name lang="en">Person</doc:name>
+            <doc:annotations>
+               <rapla:annotation key="nameformat">{surname} {firstname}</rapla:annotation>
+               <rapla:annotation key="classification-type">person</rapla:annotation>
+            </doc:annotations>
+            <relax:element name="surname">
+               <doc:name lang="en">surname</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <relax:element name="firstname">
+               <doc:name lang="en">First name</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <relax:element name="email">
+               <doc:name lang="en">Email</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <rapla:permission access="read_type"/>
+            <rapla:permission access="allocate_conflicts"/>
+         </relax:element>
+      </relax:define>
+
+      <relax:define name="event">
+         <relax:element name="dynatt:event" id="d90c08d5-9d04-4a7e-bd31-40527c886b78" created-at="2015-08-27T19:58:39.0267Z" last-changed="2015-08-27T19:58:39.0267Z">
+            <doc:name lang="en">Event</doc:name>
+            <doc:annotations>
+               <rapla:annotation key="nameformat">{name}</rapla:annotation>
+               <rapla:annotation key="classification-type">reservation</rapla:annotation>
+            </doc:annotations>
+            <relax:element name="name">
+               <doc:name lang="en">eventname</doc:name>
+               <relax:data type="string"/>
+            </relax:element>
+            <rapla:permission access="read_type"/>
+            <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+            <rapla:permission group="category[key='create-events']" access="create"/>
+         </relax:element>
+      </relax:define>
+
+      <relax:define name="resource1">
+         <relax:element name="dynatt:resource1" id="df6df01e-7169-4dbd-949b-d90158fcfa21" created-at="2015-09-30T19:53:58.0376Z" last-changed="2015-09-30T20:01:49.0081Z">
+            <doc:name lang="en">Location</doc:name>
+            <doc:annotations>
+               <rapla:annotation key="nameformat">{name} {room}</rapla:annotation>
+               <rapla:annotation key="classification-type">resource</rapla:annotation>
+               <rapla:annotation key="location">true</rapla:annotation>
+               <rapla:annotation key="colors">rapla:automated</rapla:annotation>
+            </doc:annotations>
+            <relax:element name="name">
+               <doc:name lang="en">Name</doc:name>
+               <relax:data type="string"/>
+               <rapla:default></rapla:default>
+            </relax:element>
+            <relax:element name="room">
+               <doc:name lang="en">Room</doc:name>
+               <relax:data type="string"/>
+               <rapla:default></rapla:default>
+            </relax:element>
+            <rapla:permission access="read_type"/>
+            <rapla:permission access="allocate_conflicts"/>
+         </relax:element>
+      </relax:define>
+
+      <relax:define name="resource2">
+         <relax:element name="dynatt:resource2" id="dd4a9215-8ef1-438b-8dc7-a5492b4ed2c7" created-at="2015-09-30T19:58:37.0536Z" last-changed="2015-09-30T20:02:28.0448Z">
+            <doc:name lang="en">Goals</doc:name>
+            <doc:annotations>
+               <rapla:annotation key="nameformat">Goals to be accomplished: {goals}</rapla:annotation>
+               <rapla:annotation key="classification-type">resource</rapla:annotation>
+               <rapla:annotation key="colors">rapla:automated</rapla:annotation>
+            </doc:annotations>
+            <relax:element name="goals">
+               <doc:name lang="en">Goals to Accomplish</doc:name>
+               <relax:data type="string"/>
+               <rapla:default></rapla:default>
+            </relax:element>
+            <rapla:permission access="read_type"/>
+            <rapla:permission access="allocate_conflicts"/>
+         </relax:element>
+      </relax:define>
+
+      <relax:start>
+         <relax:choice>
+            <relax:ref name="resource"/>
+            <relax:ref name="person"/>
+            <relax:ref name="event"/>
+            <relax:ref name="resource1"/>
+            <relax:ref name="resource2"/>
+         </relax:choice>
+      </relax:start>
+   </relax:grammar>
+
+   <rapla:preferences>
+      <rapla:entry key="org.rapla.plugin.abstractcalendar.only_own_reservations" value="false"/>
+      <rapla:entry key="org.rapla.crypto.server.privateKey" value="MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCuWssS1j8fvCMCvtiBZ6w1Yeseqmh3QksWJQ3bES1-gndmu9P3itTeDYoxjJnCg0Pv__IGYhnP803zexop9tSy-coynaVS1emsA_0XT5oRiJKBxytrG5zaejjgilCFrXgkFgkhnHwqhU71rzWhge-4mRVJwWuLwXIr3KgbaXzkt0OT9TPJZ-tFMC8CceP-6Oxz0DfHEW9IdQ52B2rH4my72VrhkG1Zx3u3weswif25mL40gUaHESjTxCqUyNZtBn-ySj2rpmZn1Qcgv_jRGtWxwJD-xXVmVOiPn4oRmFXHZWpb9lGT8KgBmwPl9AAvPtMMULjJdccrBLD_4-wAv4b9AgMBAAECggEAHtYyCm_YFD3LF2Y3lpOGcp6R3geXmFgiPZVqIO-l0zUx9vqLX8GvKmLMqTzLyQo8Tss-vABHvm6yv7hrBTcBoXHqYA9fuQnaXTELZz8N6cH0330hYb0tfbqWKqhr22i10fQPw2EQ2NhhAbTuUFVR151DlZre8YXSMo3BMa_zhePUlPCIuKUz1BSd2-5Alxm1t03I_QYdmI3cYzk4SqhQzNrxmmAGfueg9O8Prjd8JeoB15SyPX87ViRpFV544EOJVMJPnf1EyZ3z2Fg_Qz3QlW-zU_50vJJhZuuv2CsQzAVhMwElsJ_ZPSWyCvdZwPu7SfkhrJylwCY7DdgUnz39pQKBgQDtOGu82ro4p2M9S_RltxhGq-uaYl-iqYx8GEps6YSUtI1wBl15czx6OxpEg9Wk9Ri7uPWj0riZs55l94U-yNTjq6HRG4by680bABXXDjGJFPGkseNf1GO2zHIWARVtzqcgMKtJoXdNKtvGeiDf3I52bGXKhv_wUR5ap1MPsbXK0wKBgQC8KFEWFLC8Mg4C3JYV8CBnkGEsiZ7E_HoqI9ZQJF25K6JDka6_iTRSJ7BzKegsvbz-q7m2DDGrTJchiRCoCPxTHP6vH7UF6vmlAPgPcPK2OQRawnlslrXOMQ3PJpl08gDO5em591fabiu5ABojpo-rGmXepoDUg7hfInOyVoik7wKBgAYvm3egSIzjqI3Xpjbk0Gg_YXR0LkRCoZw20fIHIOLz1mBeeh-JpsEVO3kf6vlTPuLeTuGHxDKV4YKNMtdRS2PofN7EFf_NsFqM5QTnpNkLR8Xgsao1EqiYqjzyqEllwyvuuPjBkifb_0EsvCC6Uqi56OmgHZp5sw3wIRVer_vrAoGAOcgvzpYgCEte3iYbuTT63pMKJIFGzruyUIqc4BOq7JinxhRRE-TwumIR3-v4rvS9u3_FElEAV9i3eMb85H2N74Ax_lnAX8bfT3rSsvs-rhMocS7T1zMZNe7-jKUP70f6U49rjX6V7jBzIOcVH-mgqSz8J7n-SkUBM8YCvbuxTuUCgYBfoGJwuKVPpg0sG3zNTa9mQ5FoiyTYVvfFEi3mm6uYDLt4wGpvk94C7A4PpIE7yyb0Xu218RCElSzh0w69GQp-u91r3CO9fh-C8qMqvdcHRDDNETL1Ty94Ak8QzCOpqXat3uCkNz4U8Mol3cLGsQRTkakgOst113ZY4SrgUtGlcA"/>
+      <rapla:entry key="org.rapla.crypto.publicKey" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArlrLEtY_H7wjAr7YgWesNWHrHqpod0JLFiUN2xEtfoJ3ZrvT94rU3g2KMYyZwoND7__yBmIZz_NN83saKfbUsvnKMp2lUtXprAP9F0-aEYiSgccraxuc2no44IpQha14JBYJIZx8KoVO9a81oYHvuJkVScFri8FyK9yoG2l85LdDk_UzyWfrRTAvAnHj_ujsc9A3xxFvSHUOdgdqx-Jsu9la4ZBtWcd7t8HrMIn9uZi-NIFGhxEo08QqlMjWbQZ_sko9q6ZmZ9UHIL_40RrVscCQ_sV1ZlToj5-KEZhVx2VqW_ZRk_CoAZsD5fQALz7TDFC4yXXHKwSw_-PsAL-G_QIDAQAB"/>
+   </rapla:preferences>
+
+   <rapla:users>
+      <!-- Users of the system -->
+      <rapla:user id="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-08-27T19:58:34.0261Z" last-changed="2015-08-27T19:58:34.0261Z" username="admin" password="" name="" email="" isAdmin="true">
+         <rapla:preferences>
+            <rapla:entry key="org.rapla.plugin.autoexport">
+               <rapla:map>
+                  <rapla:mapentry key="CSE2102 Lab">
+                     <rapla:calendar title="" view="week">
+                        <selected>
+                           <rapla:user idref="u405db03-812f-4ff7-b52c-5423a7951cf4"/>
+                        </selected>
+                        <options>
+                           <rapla:map>
+                              <rapla:mapentry key="org.rapla.plugin.abstractcalendar.show_navigation" value="true"/>
+                              <rapla:mapentry key="org.rapla.plugin.abstractcalendar.save_selected_date" value="false"/>
+                              <rapla:mapentry key="org.rapla.plugin.export2ical.selected" value="false"/>
+                              <rapla:mapentry key="org.rapla.plugin.tableview.blocks.sortingstring" value="3-;"/>
+                              <rapla:mapentry key="org.rapla.plugin.autoexport.selected" value="false"/>
+                           </rapla:map>
+                        </options>
+                     </rapla:calendar>
+                  </rapla:mapentry>
+                  <rapla:mapentry key="Meal Schedule">
+                     <rapla:calendar title="" view="week">
+                        <selected>
+                           <rapla:dynamictype keyref="resource"/>
+                        </selected>
+                        <options>
+                           <rapla:map>
+                              <rapla:mapentry key="org.rapla.plugin.abstractcalendar.show_navigation" value="true"/>
+                              <rapla:mapentry key="org.rapla.plugin.abstractcalendar.save_selected_date" value="false"/>
+                              <rapla:mapentry key="org.rapla.plugin.export2ical.selected" value="false"/>
+                              <rapla:mapentry key="org.rapla.plugin.tableview.blocks.sortingstring" value="3-;"/>
+                              <rapla:mapentry key="org.rapla.plugin.autoexport.selected" value="false"/>
+                           </rapla:map>
+                        </options>
+                     </rapla:calendar>
+                  </rapla:mapentry>
+               </rapla:map>
+            </rapla:entry>
+            <rapla:entry key="org.rapla.showSelection" value="false"/>
+         </rapla:preferences>
+      </rapla:user>
+      <rapla:user id="u1fd00da-f366-485e-a7a4-23eb8d9a6607" created-at="2015-09-30T19:48:03.0481Z" last-changed="2015-09-30T20:12:56.0432Z" username="clj13001" password="sha-1:615bcf3b78c35ce89ba5c04706ac742c01dd9435" name="Jackson Connor" email="connor.jackson@uconn.edu" isAdmin="true">
+         <rapla:group key="category[key='read-events-from-others']"/>
+         <rapla:group key="category[key='create-events']"/>
+      </rapla:user>
+      <rapla:user id="ud9ce8c8-0353-47d0-8e9f-ddf55bd2b29c" created-at="2015-09-30T19:48:47.0320Z" last-changed="2015-09-30T20:13:06.0648Z" username="superman" password="sha-1:c5b22122a4ca67d2178cd081cb1eb43c7a52db77" name="Claxton Adam" email="adam.claxton@uconn.edu" isAdmin="true">
+         <rapla:group key="category[key='read-events-from-others']"/>
+         <rapla:group key="category[key='create-events']"/>
+      </rapla:user>
+   </rapla:users>
+
+   <rapla:resources>
+      <!-- resources -->
+      <rapla:resource id="r6384587-5bb5-481c-860b-706f9525b916" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-08-27T19:58:34.0261Z" last-changed="2015-08-27T19:58:34.0261Z">
+         <dynatt:resource>
+            <dynatt:name>test</dynatt:name>
+         </dynatt:resource>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:person id="r9427474-3f82-4624-adf1-c4f3d7948e55" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T19:51:34.0817Z" last-changed="2015-09-30T19:51:51.0273Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:person>
+            <dynatt:surname>Jackson</dynatt:surname>
+            <dynatt:firstname>Connor</dynatt:firstname>
+            <dynatt:email>connor.jackson@uconn.edu</dynatt:email>
+         </dynatt:person>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:person>
+      <rapla:person id="rf326f98-5296-4429-b30e-f601c5068dca" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T19:51:57.0568Z" last-changed="2015-09-30T19:52:06.0976Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:person>
+            <dynatt:surname>Claxton</dynatt:surname>
+            <dynatt:firstname>Adam</dynatt:firstname>
+            <dynatt:email>adam.claxton@uconn.edu</dynatt:email>
+         </dynatt:person>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:person>
+      <rapla:person id="re54c5f0-fb3a-4c55-9b35-5d001e3fdfd6" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T20:10:48.0879Z" last-changed="2015-09-30T20:11:01.0542Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:person>
+            <dynatt:surname>Dyakiw</dynatt:surname>
+            <dynatt:firstname>Margen</dynatt:firstname>
+            <dynatt:email>margen.dyakiw@uconn.edu</dynatt:email>
+         </dynatt:person>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:person>
+      <rapla:person id="r8bf75a5-393f-4b0a-bf43-cb4e1845ab55" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T20:11:30.0088Z" last-changed="2015-09-30T20:11:40.0528Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:person>
+            <dynatt:surname>Costa</dynatt:surname>
+            <dynatt:firstname>John</dynatt:firstname>
+            <dynatt:email>-</dynatt:email>
+         </dynatt:person>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:person>
+      <rapla:resource id="r37098ec-cc68-4216-9cba-b30d1d2f82da" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T19:54:55.0776Z" last-changed="2015-09-30T20:01:54.0839Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource1>
+            <dynatt:name>ITE</dynatt:name>
+            <dynatt:room>138</dynatt:room>
+         </dynatt:resource1>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="r20ee3eb-457e-45ff-83a1-28fd8390e1bc" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T20:07:00.0802Z" last-changed="2015-09-30T20:07:14.0367Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource1>
+            <dynatt:name>woods</dynatt:name>
+            <dynatt:room></dynatt:room>
+         </dynatt:resource1>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="r2b86f8b-8d4b-4238-871f-8abdf8b998a6" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T20:14:24.0418Z" last-changed="2015-09-30T20:14:31.0215Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource1>
+            <dynatt:name>Dining Hall</dynatt:name>
+            <dynatt:room></dynatt:room>
+         </dynatt:resource1>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="r1bbedc7-cf3a-4db6-b817-c2a750543755" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T19:59:52.0182Z" last-changed="2015-09-30T20:00:03.0184Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource2>
+            <dynatt:goals>Needs to be Completed</dynatt:goals>
+         </dynatt:resource2>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="r774d66d-a49d-44fa-be59-06fffcca3efc" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T20:00:06.0832Z" last-changed="2015-09-30T20:00:12.0399Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource2>
+            <dynatt:goals>Minor Work Required</dynatt:goals>
+         </dynatt:resource2>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="rfcceda0-d606-4c84-ad93-ceaf278b6878" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T20:00:14.0288Z" last-changed="2015-09-30T20:00:17.0919Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource2>
+            <dynatt:goals>Meeting Time</dynatt:goals>
+         </dynatt:resource2>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="r6335dbc-65b4-4849-9923-e4451165da95" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T20:00:20.0814Z" last-changed="2015-09-30T20:00:24.0790Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource2>
+            <dynatt:goals>Discussion</dynatt:goals>
+         </dynatt:resource2>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+
+   </rapla:resources>
+
+   <rapla:reservations>
+      <rapla:reservation id="eafb26e8-22f1-4234-8303-7e4edb037814" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T19:52:14.0376Z" last-changed="2015-09-30T20:11:46.0312Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>CSE2102 L</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a9183a42-310b-4552-8cd3-0c5aca2d75d6" start-date="2015-09-30" start-time="15:35:00" end-date="2015-09-30" end-time="19:30:00">
+            <rapla:repeating type="weekly" end-date="2015-12-12"/>
+         </rapla:appointment>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:allocate idref="r9427474-3f82-4624-adf1-c4f3d7948e55"/>
+         <rapla:allocate idref="r37098ec-cc68-4216-9cba-b30d1d2f82da"/>
+         <rapla:allocate idref="r774d66d-a49d-44fa-be59-06fffcca3efc"/>
+         <rapla:allocate idref="re54c5f0-fb3a-4c55-9b35-5d001e3fdfd6"/>
+         <rapla:allocate idref="r8bf75a5-393f-4b0a-bf43-cb4e1845ab55"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e9c1a2b4-02e5-423a-ac41-a668c48adcf7" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T20:06:40.0375Z" last-changed="2015-09-30T20:08:04.0129Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>night hike</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="aea89a5a-7b90-41c8-af8b-217afcf23fdf" start-date="2015-10-01" start-time="21:00:00" end-date="2015-10-02" end-time="00:00:00">
+            <rapla:repeating type="weekly" number="8"/>
+         </rapla:appointment>
+         <rapla:allocate idref="r20ee3eb-457e-45ff-83a1-28fd8390e1bc"/>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="eb8c596c-21f2-4092-8eda-34ffcf352772" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T20:14:06.0790Z" last-changed="2015-09-30T20:14:46.0318Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Lunch</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a7eb200f-5a58-458f-a47f-3a1b7b3cf019" start-date="2015-09-28" start-time="12:00:00" end-date="2015-09-28" end-time="12:15:00">
+            <rapla:repeating type="daily" number="7"/>
+         </rapla:appointment>
+         <rapla:allocate idref="r6384587-5bb5-481c-860b-706f9525b916"/>
+         <rapla:allocate idref="r9427474-3f82-4624-adf1-c4f3d7948e55"/>
+         <rapla:allocate idref="r1bbedc7-cf3a-4db6-b817-c2a750543755"/>
+         <rapla:allocate idref="r2b86f8b-8d4b-4238-871f-8abdf8b998a6"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e59e25ed-9cb5-4c48-a440-c9158e311152" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-10-11T20:39:43.0058Z" last-changed="2015-10-11T20:39:47.0542Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>study</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a7a87cd7-22f9-4519-870a-0251e3bd45a0" start-date="2015-10-12" start-time="10:45:00" end-date="2015-10-12" end-time="11:00:00"/>
+         <rapla:allocate idref="r6384587-5bb5-481c-860b-706f9525b916"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e3628b07-29d5-469b-8aa4-5ef9d910c827" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-10-11T20:39:49.0224Z" last-changed="2015-10-11T20:39:52.0188Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>lunch</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="ab7bc9c1-c810-4eeb-87fe-ed26349fad6c" start-date="2015-10-13" start-time="11:45:00" end-date="2015-10-13" end-time="12:00:00"/>
+         <rapla:allocate idref="r6384587-5bb5-481c-860b-706f9525b916"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e1cfdb94-73e7-46d5-96a8-ade17e4de329" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-10-12T01:35:35.0143Z" last-changed="2015-10-12T01:36:04.0071Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>event</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="af77e6f2-f4a7-4fec-881a-b93fb70f147e" start-date="2015-10-13" start-time="08:00:00" end-date="2015-10-13" end-time="09:00:00"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e9f9ae8a-eeef-4afb-be38-c68a0682a156" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-10-12T01:36:14.0412Z" last-changed="2015-10-12T01:36:38.0288Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>event today</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a589c042-d5d3-4e43-bdf4-0138e9eda1ea" start-date="2015-10-12" start-time="11:30:00" end-date="2015-10-12" end-time="11:45:00"/>
+         <rapla:allocate idref="r6384587-5bb5-481c-860b-706f9525b916"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+   </rapla:reservations>
+
+</rapla:data>
