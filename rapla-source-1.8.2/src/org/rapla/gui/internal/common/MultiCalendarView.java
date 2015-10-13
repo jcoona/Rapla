@@ -150,7 +150,9 @@ public class MultiCalendarView extends RaplaGUIComponent
         final JPanel filterContainer = new JPanel();
         filterContainer.setLayout( new BorderLayout());
         filterContainer.add(filter.getButton(), BorderLayout.WEST);
-        header.add( filterContainer, BorderLayout.SOUTH);
+        header.add( filterContainer, BorderLayout.SOUTH); 
+        FilterEditButton filter2 = new FilterEditButton(context, model, this, false);
+        filterContainer.add(filter2.getButton(), BorderLayout.EAST);
         page.setBackground( Color.white );
         page.setLayout(new TableLayout( new double[][]{
                 {TableLayout.PREFERRED, TableLayout.FILL}
