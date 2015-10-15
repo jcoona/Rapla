@@ -175,7 +175,7 @@
                   </rapla:mapentry>
                </rapla:map>
             </rapla:entry>
-            <rapla:entry key="org.rapla.showSelection" value="false"/>
+            <rapla:entry key="org.rapla.showSelection" value="true"/>
          </rapla:preferences>
       </rapla:user>
       <rapla:user id="u1fd00da-f366-485e-a7a4-23eb8d9a6607" created-at="2015-09-30T19:48:03.0481Z" last-changed="2015-09-30T20:12:56.0432Z" username="clj13001" password="sha-1:615bcf3b78c35ce89ba5c04706ac742c01dd9435" name="Jackson Connor" email="connor.jackson@uconn.edu" isAdmin="true">
@@ -245,6 +245,13 @@
       <rapla:resource id="r2b86f8b-8d4b-4238-871f-8abdf8b998a6" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T20:14:24.0418Z" last-changed="2015-09-30T20:14:31.0215Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
          <dynatt:resource1>
             <dynatt:name>Dining Hall</dynatt:name>
+            <dynatt:room></dynatt:room>
+         </dynatt:resource1>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="r63b617d-eb7d-4bac-8e49-3e822041827e" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-10-15T00:34:26.0182Z" last-changed="2015-10-15T00:34:37.0346Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource1>
+            <dynatt:name>My house</dynatt:name>
             <dynatt:room></dynatt:room>
          </dynatt:resource1>
          <rapla:permission access="allocate_conflicts"/>
@@ -345,6 +352,13 @@
          </dynatt:event>
          <rapla:appointment id="a589c042-d5d3-4e43-bdf4-0138e9eda1ea" start-date="2015-10-12" start-time="11:30:00" end-date="2015-10-12" end-time="11:45:00"/>
          <rapla:allocate idref="r6384587-5bb5-481c-860b-706f9525b916"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e3910ac4-4f46-4f44-a2ea-5e1a0a2ce14c" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-10-15T00:43:28.0146Z" last-changed="2015-10-15T00:43:38.0421Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>lunch event</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a66bda0f-a8e7-4c15-bf8c-7394983759d6" start-date="2015-10-14" start-time="11:00:00" end-date="2015-10-14" end-time="11:15:00"/>
          <rapla:permission group="category[key='read-events-from-others']" access="read"/>
       </rapla:reservation>
    </rapla:reservations>

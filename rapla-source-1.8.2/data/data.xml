@@ -249,6 +249,13 @@
          </dynatt:resource1>
          <rapla:permission access="allocate_conflicts"/>
       </rapla:resource>
+      <rapla:resource id="r63b617d-eb7d-4bac-8e49-3e822041827e" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-10-15T00:34:26.0182Z" last-changed="2015-10-15T00:34:37.0346Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource1>
+            <dynatt:name>My house</dynatt:name>
+            <dynatt:room></dynatt:room>
+         </dynatt:resource1>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
       <rapla:resource id="r1bbedc7-cf3a-4db6-b817-c2a750543755" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T19:59:52.0182Z" last-changed="2015-09-30T20:00:03.0184Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
          <dynatt:resource2>
             <dynatt:goals>Needs to be Completed</dynatt:goals>
@@ -345,6 +352,21 @@
          </dynatt:event>
          <rapla:appointment id="a589c042-d5d3-4e43-bdf4-0138e9eda1ea" start-date="2015-10-12" start-time="11:30:00" end-date="2015-10-12" end-time="11:45:00"/>
          <rapla:allocate idref="r6384587-5bb5-481c-860b-706f9525b916"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e3910ac4-4f46-4f44-a2ea-5e1a0a2ce14c" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-10-15T00:43:28.0146Z" last-changed="2015-10-15T00:43:38.0421Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>lunch event</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a66bda0f-a8e7-4c15-bf8c-7394983759d6" start-date="2015-10-14" start-time="11:00:00" end-date="2015-10-14" end-time="11:15:00"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e9590268-7218-40b7-b330-f8b5af711d2d" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-10-15T00:43:45.0141Z" last-changed="2015-10-15T00:44:00.0046Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>lunch event</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="ae44a708-dbc5-4fb3-80b8-e2d6845585f8" start-date="2015-10-14" start-time="11:15:00" end-date="2015-10-14" end-time="11:30:00"/>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
          <rapla:permission group="category[key='read-events-from-others']" access="read"/>
       </rapla:reservation>
    </rapla:reservations>

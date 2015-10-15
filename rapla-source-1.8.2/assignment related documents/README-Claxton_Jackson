@@ -7,9 +7,13 @@ Adam Claxton
 Team project:
 Rapla Scheduler
 
+Addon:
+SearchTextField
+
 GIT Link to our Repository:
 https://github.uconn.edu/clj13001/CSE2102-Fall2015-Claxton-Jackson
 
 IN ASSIGNMENT RELATED DOCUMENTS:
 Assignment #2: Write up of how to create UML diagrams, in general.
-Assignment #3: Write up of the SearchEditButton in MS Word, as well as the SearchEditButton UML.
+Assignment #3: Write up of the SearchTextField in MS Word, as well as the SearchEditButton UML.
+Assignment #4: Write up of use case diagram for SearchTextField
