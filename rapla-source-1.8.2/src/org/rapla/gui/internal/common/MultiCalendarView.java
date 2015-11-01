@@ -57,6 +57,7 @@ import org.rapla.gui.VisibleTimeInterval;
 import org.rapla.gui.internal.CalendarEditor;
 import org.rapla.gui.internal.FilterEditButton;
 import org.rapla.gui.internal.edit.ClassifiableFilterEdit;
+import org.rapla.gui.internal.edit.fields.SearchTextField;
 import org.rapla.gui.toolkit.IdentifiableMenuEntry;
 import org.rapla.gui.toolkit.RaplaMenu;
 import org.rapla.gui.toolkit.RaplaMenuItem;
@@ -112,6 +113,7 @@ public class MultiCalendarView extends RaplaGUIComponent
     boolean editable = true;
     boolean listenersEnabled = true;
     FilterEditButton filter;
+    SearchTextField search;
     CalendarEditor calendarEditor;
     
     public MultiCalendarView(RaplaContext context,CalendarSelectionModel model, CalendarEditor calendarEditor) throws RaplaException {
@@ -149,10 +151,8 @@ public class MultiCalendarView extends RaplaGUIComponent
         filter =new FilterEditButton(context,model, this, false);
         final JPanel filterContainer = new JPanel();
         filterContainer.setLayout( new BorderLayout());
-        filterContainer.add(filter.getButton(), BorderLayout.WEST);
+        filterContainer.add(filter.getButton(), BorderLayout.EAST);
         header.add( filterContainer, BorderLayout.SOUTH); 
-        FilterEditButton filter2 = new FilterEditButton(context, model, this, false);
-        filterContainer.add(filter2.getButton(), BorderLayout.EAST);
         page.setBackground( Color.white );
         page.setLayout(new TableLayout( new double[][]{
                 {TableLayout.PREFERRED, TableLayout.FILL}
