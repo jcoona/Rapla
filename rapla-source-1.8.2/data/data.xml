@@ -284,7 +284,7 @@
    </rapla:resources>
 
    <rapla:reservations>
-      <rapla:reservation id="eafb26e8-22f1-4234-8303-7e4edb037814" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T19:52:14.0376Z" last-changed="2015-09-30T20:11:46.0312Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+      <rapla:reservation id="eafb26e8-22f1-4234-8303-7e4edb037814" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T19:52:14.0376Z" last-changed="2015-11-02T01:09:41.0312Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
          <dynatt:event>
             <dynatt:name>CSE2102 L</dynatt:name>
          </dynatt:event>
@@ -297,6 +297,7 @@
          <rapla:allocate idref="r774d66d-a49d-44fa-be59-06fffcca3efc"/>
          <rapla:allocate idref="re54c5f0-fb3a-4c55-9b35-5d001e3fdfd6"/>
          <rapla:allocate idref="r8bf75a5-393f-4b0a-bf43-cb4e1845ab55"/>
+         <rapla:allocate idref="r63b617d-eb7d-4bac-8e49-3e822041827e"/>
          <rapla:permission group="category[key='read-events-from-others']" access="read"/>
       </rapla:reservation>
       <rapla:reservation id="e9c1a2b4-02e5-423a-ac41-a668c48adcf7" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T20:06:40.0375Z" last-changed="2015-09-30T20:08:04.0129Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
@@ -367,6 +368,28 @@
          </dynatt:event>
          <rapla:appointment id="ae44a708-dbc5-4fb3-80b8-e2d6845585f8" start-date="2015-10-14" start-time="11:15:00" end-date="2015-10-14" end-time="11:30:00"/>
          <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="ed2c319d-cb65-4ac6-bd52-aa242c1e6662" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-02T01:17:35.0304Z" last-changed="2015-11-02T01:18:11.0397Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>sample event</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="aba0cdc7-c710-47e7-964b-ed244dd8af89" start-date="2015-11-03" start-time="09:45:00" end-date="2015-11-03" end-time="12:45:00"/>
+         <rapla:allocate idref="r6384587-5bb5-481c-860b-706f9525b916"/>
+         <rapla:allocate idref="r2b86f8b-8d4b-4238-871f-8abdf8b998a6"/>
+         <rapla:allocate idref="r774d66d-a49d-44fa-be59-06fffcca3efc"/>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e2508c90-bf82-4c45-82ae-366f19799501" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-02T01:18:13.0841Z" last-changed="2015-11-02T01:18:42.0598Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>another sample event</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a0e5d919-d53d-44a9-9dc9-9e3d366f2533" start-date="2015-11-04" start-time="12:30:00" end-date="2015-11-04" end-time="15:00:00"/>
+         <rapla:allocate idref="r6384587-5bb5-481c-860b-706f9525b916"/>
+         <rapla:allocate idref="r37098ec-cc68-4216-9cba-b30d1d2f82da"/>
+         <rapla:allocate idref="r774d66d-a49d-44fa-be59-06fffcca3efc"/>
+         <rapla:allocate idref="r8bf75a5-393f-4b0a-bf43-cb4e1845ab55"/>
          <rapla:permission group="category[key='read-events-from-others']" access="read"/>
       </rapla:reservation>
    </rapla:reservations>
