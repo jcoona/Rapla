@@ -72,6 +72,11 @@ import org.rapla.gui.internal.edit.fields.TextField;
 import org.rapla.gui.toolkit.RaplaButton;
 import org.rapla.gui.toolkit.RaplaWidget;
 
+/**
+ * This class contains information that populates the pop-up window
+ * when we choose to filter by resource/event.
+ * @author Jackson
+ */
 
 public class ClassifiableFilterEdit extends RaplaGUIComponent
     implements
