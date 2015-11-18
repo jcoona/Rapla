@@ -166,6 +166,7 @@ public class TextField extends AbstractEditField implements ActionListener,Focus
         if (field.getText().equals(oldValue))
             return;
         oldValue = field.getText();
+        System.out.println(oldValue);
         fireContentChanged();
     }
 

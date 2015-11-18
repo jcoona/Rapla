@@ -1,5 +1,9 @@
 package org.rapla.gui.internal.edit.fields;
 
+import java.awt.event.ActionListener;
+import java.awt.event.FocusListener;
+import java.awt.event.KeyListener;
+
 import org.rapla.framework.RaplaContext;
 /**
  * Here is an enhancement for faster searching methods. This class
@@ -9,7 +13,7 @@ import org.rapla.framework.RaplaContext;
  * @author Jackson, Claxton
  *
  */
-public class SearchTextField extends TextField
+public class SearchTextField extends TextField implements ActionListener,FocusListener,KeyListener, MultiEditField, SetGetField<String>
 {
 
 	public SearchTextField(RaplaContext context) 
