@@ -664,7 +664,7 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
                     this.add("2," + row + ",l,c", ruleRow.ruleLabel);
                 else
                     this.add("2," + row + ",r,c", new JLabel(getString("or")));
-                this.add("4," + row + ",l,c", ruleRow.operatorComponent);
+                //this.add("4," + row + ",l,c", ruleRow.operatorComponent);
                 this.add("6," + row + ",f,c", ruleRow.field.getComponent());
                 row ++;
                 if (i<size -1) {
@@ -736,17 +736,21 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
             {
                 ((ItemSelectable)operatorComponent).addItemListener(this);
             }
+            
         }
 
 
         public String getOperatorValue() {
+        	/*
             AttributeType type = attribute.getType();
             if (type.equals(AttributeType.ALLOCATABLE) || type.equals(AttributeType.CATEGORY) || type.equals(AttributeType.BOOLEAN) )
                 return "is";
             if (type.equals(AttributeType.STRING)) {
             	int index = ((JComboBox)operatorComponent).getSelectedIndex();
             	if (index == 0)
+            	*/
                 return "contains";
+                /*
             	if (index == 1)
             		return "starts";
             }
@@ -768,6 +772,7 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
             }
             Assert.notNull(field,"Unknown AttributeType" + type);
             return null;
+            */
         }
 
         private void setOperatorValue(String operator) {
@@ -800,6 +805,7 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
             @SuppressWarnings("unused")
             SetGetField test;
             RaplaContext context = getContext();
+            /*
             if (type.equals(AttributeType.ALLOCATABLE))
             {
                 operatorComponent = new JLabel("");
@@ -824,7 +830,8 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 					test = newField;
                 }
             }
-            else if (type.equals(AttributeType.STRING))
+            */
+            //else if (type.equals(AttributeType.STRING))
             {
                 TextField newField = new TextField(context);
 				field = newField;
@@ -838,6 +845,7 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 				JComboBox jComboBox = new JComboBox(model);
 				operatorComponent = jComboBox;
             }
+            /*
             else if (type.equals(AttributeType.INT))
             {
                 LongField newField = new LongField(context);
@@ -880,7 +888,7 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 				test = newField;
                 ruleValue = new Boolean(false);
             }
-           
+           */
             Assert.notNull(field,"Unknown AttributeType");
             return field;
         }
