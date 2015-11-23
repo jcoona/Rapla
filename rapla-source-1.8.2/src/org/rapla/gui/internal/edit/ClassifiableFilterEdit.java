@@ -98,16 +98,12 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent
         super( context);
         content.setBackground(UIManager.getColor("List.background"));
         scrollPane = new JScrollPane(content
-                                     ,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS
+                                     ,JScrollPane.VERTICAL_SCROLLBAR_NEVER
                                      ,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED
                                      );
         scrollPane.setPreferredSize(new Dimension(590,400));
         this.isResourceSelection = isResourceSelection;
         content.setBorder( BorderFactory.createEmptyBorder(5,5,5,5));
-        everythingButton.setText( getString("select_everything") );
-        everythingButton.setIcon( getIcon("icon.all-checked"));
-        nothingButton.setText(getString("select_nothing"));
-        nothingButton.setIcon( getIcon("icon.all-unchecked"));
     }
     
     public JComponent getClassificationTitle(String classificationType) {
@@ -138,8 +134,6 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent
         for (int i = 0;i<listeners.length; i++) {
             listeners[i].stateChanged(evt);
         }
-    	everythingButton.setEnabled( true);
-		nothingButton.setEnabled( true);
     }
 
   
@@ -175,7 +169,8 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent
                 lastClassificationType = classificationType;
                 tableLayout.insertRow( row, TableLayout.MINIMUM);
                 content.add( getClassificationTitle( classificationType),"0,"+ row +",1," + row) ;
-                if ( i== 0 )
+                
+                if ( false)//i== 0 )
                 {
                   
                     everythingButton.setSelected( true);
@@ -214,8 +209,8 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent
                     nothingButton.addActionListener( resetButtonListener);
                     JPanel buttonPanel = new JPanel();
                     buttonPanel.setBackground( content.getBackground());
-                    buttonPanel.add( everythingButton);
-                    buttonPanel.add( nothingButton);
+                    //buttonPanel.add( everythingButton);
+                    //buttonPanel.add( nothingButton);
                     content.add( buttonPanel,"2,"+ row +",r,c");
                    
                 }
@@ -238,7 +233,7 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent
             checkBox.setOpaque( false );
             checkBox.addActionListener(this);
             checkBox.setSelected( true );
-            content.add( checkBox , "0," + (row + 1) + ",l,t");
+            //content.add( checkBox , "0," + (row + 1) + ",l,t");
             filterEdit[i] = new ClassificationEdit(getContext(), scrollPane);
             final ClassificationEdit edit = filterEdit[i];
             content.add( edit.getNewComponent() , "2," + (row + 1));
@@ -247,8 +242,8 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent
             edit.addChangeListener(new ChangeListener() {
                 
                 public void stateChanged(ChangeEvent e) {
-                	everythingButton.setEnabled( true);
-        			nothingButton.setEnabled( true);
+                	//everythingButton.setEnabled( true);
+        			//nothingButton.setEnabled( true);
                     fireFilterChanged();
                 }
             }
@@ -342,10 +337,10 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent
     public void actionPerformed(ActionEvent evt) {
     	for (int i=0;i<checkBoxes.length;i++) {
             if (checkBoxes[i] == evt.getSource()) {
-                if (checkBoxes[i].isSelected())
+                //if (checkBoxes[i].isSelected())
                     filterEdit[i].mapFrom(types[i].newClassificationFilter());
-                else
-                    filterEdit[i].mapFrom(null);
+                //else
+                    //filterEdit[i].mapFrom(null);
                 // activate the i. filter
             }
         }
@@ -573,10 +568,10 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
             Assert.notNull(attribute);
             Object[] ruleValues = rule.getValues();
             String[] operators = rule.getOperators();
-            for (int i=0;i<ruleValues.length;i++) {
-                RuleRow row = createRow(operators[i], ruleValues[i]);
+            //for (int i=0;i<ruleValues.length;i++) {
+                RuleRow row = createRow(operators[0], ruleValues[0]);
                 ruleRows.add(row);
-            }
+            //}
             rebuild();
         }
 

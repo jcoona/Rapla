@@ -173,6 +173,39 @@
                         </options>
                      </rapla:calendar>
                   </rapla:mapentry>
+                  <rapla:mapentry key="adam">
+                     <rapla:calendar title="" view="week" rootSelected="true">
+                        <options>
+                           <rapla:map>
+                              <rapla:mapentry key="org.rapla.plugin.autoexport.selected" value="false"/>
+                              <rapla:mapentry key="org.rapla.plugin.abstractcalendar.show_navigation" value="true"/>
+                              <rapla:mapentry key="org.rapla.plugin.abstractcalendar.save_selected_date" value="false"/>
+                              <rapla:mapentry key="org.rapla.plugin.export2ical.selected" value="false"/>
+                           </rapla:map>
+                        </options>
+                        <filter>
+                           <rapla:classificationfilter dynamictype="resource">
+                           </rapla:classificationfilter>
+                           <rapla:classificationfilter dynamictype="resource1">
+                           </rapla:classificationfilter>
+                           <rapla:classificationfilter dynamictype="resource2">
+                           </rapla:classificationfilter>
+                           <rapla:classificationfilter dynamictype="person">
+                              <rapla:rule attribute="firstname">
+                                 <rapla:orCond operator="contains"></rapla:orCond>
+                              </rapla:rule>
+                              <rapla:rule attribute="surname">
+                                 <rapla:orCond operator="contains"></rapla:orCond>
+                              </rapla:rule>
+                           </rapla:classificationfilter>
+                           <rapla:classificationfilter dynamictype="event">
+                              <rapla:rule attribute="name">
+                                 <rapla:orCond operator="contains"></rapla:orCond>
+                              </rapla:rule>
+                           </rapla:classificationfilter>
+                        </filter>
+                     </rapla:calendar>
+                  </rapla:mapentry>
                </rapla:map>
             </rapla:entry>
             <rapla:entry key="org.rapla.showSelection" value="true"/>
@@ -253,6 +286,48 @@
          <dynatt:resource1>
             <dynatt:name>My house</dynatt:name>
             <dynatt:room></dynatt:room>
+         </dynatt:resource1>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="r0a47e1d-21e0-42ad-bba9-325f8d2bf271" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:20:35.0307Z" last-changed="2015-11-23T21:21:00.0636Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource1>
+            <dynatt:name>Phillip E Austin</dynatt:name>
+            <dynatt:room>110</dynatt:room>
+         </dynatt:resource1>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="r947b463-faaa-4b8b-8dd6-1594e4c28617" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:24:03.0022Z" last-changed="2015-11-23T21:24:34.0500Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource1>
+            <dynatt:name>Beach Hall</dynatt:name>
+            <dynatt:room>443</dynatt:room>
+         </dynatt:resource1>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="r8fa4d22-1f07-4ef7-a248-5dc644588fd6" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:26:23.0530Z" last-changed="2015-11-23T21:27:00.0440Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource1>
+            <dynatt:name>Bio/Physics</dynatt:name>
+            <dynatt:room>130</dynatt:room>
+         </dynatt:resource1>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="r9d46993-85a1-488c-aa57-201c86aeece2" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:32:12.0582Z" last-changed="2015-11-23T21:33:21.0220Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource1>
+            <dynatt:name>UTEB</dynatt:name>
+            <dynatt:room>175</dynatt:room>
+         </dynatt:resource1>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="r79e09df-1858-4345-8c27-f3c5d385c56f" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:35:27.0691Z" last-changed="2015-11-23T21:35:43.0571Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource1>
+            <dynatt:name>Gentry</dynatt:name>
+            <dynatt:room>101</dynatt:room>
+         </dynatt:resource1>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
+      <rapla:resource id="r3820eb7-cad7-4adf-b19b-51395fdfc544" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:37:09.0407Z" last-changed="2015-11-23T21:37:25.0823Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource1>
+            <dynatt:name>School of Buisiness</dynatt:name>
+            <dynatt:room>106</dynatt:room>
          </dynatt:resource1>
          <rapla:permission access="allocate_conflicts"/>
       </rapla:resource>
@@ -407,6 +482,142 @@
          <rapla:appointment id="a90b1f44-4537-4062-aadf-57413c909554" start-date="2015-11-16" start-time="11:15:00" end-date="2015-11-16" end-time="16:30:00"/>
          <rapla:allocate idref="r9427474-3f82-4624-adf1-c4f3d7948e55"/>
          <rapla:allocate idref="rfcceda0-d606-4c84-ad93-ceaf278b6878"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e298ce22-59de-46b2-932e-b9a974cec2c1" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:15:52.0865Z" last-changed="2015-11-23T21:21:47.0958Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Theory of Computation</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="ad210d90-1f02-4058-823c-eb9b78fd4ded" start-date="2016-01-18" start-time="13:25:00" end-date="2016-01-18" end-time="14:40:00">
+            <rapla:repeating type="weekly"/>
+         </rapla:appointment>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:allocate idref="re54c5f0-fb3a-4c55-9b35-5d001e3fdfd6"/>
+         <rapla:allocate idref="r0a47e1d-21e0-42ad-bba9-325f8d2bf271"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="edbf3c2b-ec03-41d5-816d-8e764b7320d5" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:15:52.0865Z" last-changed="2015-11-23T21:22:57.0144Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Theory of Computation</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a41bd8a6-49ed-4416-bffd-793fdece0fc9" start-date="2016-01-20" start-time="13:25:00" end-date="2016-01-20" end-time="14:40:00">
+            <rapla:repeating type="weekly"/>
+         </rapla:appointment>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:allocate idref="re54c5f0-fb3a-4c55-9b35-5d001e3fdfd6"/>
+         <rapla:allocate idref="r0a47e1d-21e0-42ad-bba9-325f8d2bf271"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="ec4d5fda-605d-49a2-a708-f3b157f34aeb" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:23:38.0231Z" last-changed="2015-11-23T21:25:30.0380Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Atrificial Intelligence</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a2090e6d-c04f-4795-a0d2-24519d117941" start-date="2016-01-18" start-time="15:00:00" end-date="2016-01-18" end-time="16:15:00">
+            <rapla:repeating type="weekly"/>
+         </rapla:appointment>
+         <rapla:allocate idref="r947b463-faaa-4b8b-8dd6-1594e4c28617"/>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e27cf525-e247-4070-a843-7c4131ddf3b4" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:23:38.0231Z" last-changed="2015-11-23T21:25:43.0435Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Atrificial Intelligence</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="ab1aecd8-1e61-4fe5-8a96-269a78501441" start-date="2016-01-20" start-time="15:00:00" end-date="2016-01-20" end-time="16:15:00">
+            <rapla:repeating type="weekly"/>
+         </rapla:appointment>
+         <rapla:allocate idref="r947b463-faaa-4b8b-8dd6-1594e4c28617"/>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e7be0bc8-f005-4429-8b57-8fe8996dbd03" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:26:05.0163Z" last-changed="2015-11-23T21:27:36.0669Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Computer Organization And Architecture</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a1ce7bc1-9e0c-4d54-a195-e48602302e05" start-date="2016-01-19" start-time="09:30:00" end-date="2016-01-19" end-time="10:45:00">
+            <rapla:repeating type="weekly"/>
+         </rapla:appointment>
+         <rapla:allocate idref="r8fa4d22-1f07-4ef7-a248-5dc644588fd6"/>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:allocate idref="r9427474-3f82-4624-adf1-c4f3d7948e55"/>
+         <rapla:allocate idref="r8bf75a5-393f-4b0a-bf43-cb4e1845ab55"/>
+         <rapla:allocate idref="re54c5f0-fb3a-4c55-9b35-5d001e3fdfd6"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e1647dc9-f08e-40c4-a2d7-1326a20acad6" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:26:05.0163Z" last-changed="2015-11-23T21:27:45.0361Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Computer Organization And Architecture</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="ac90984b-c3ab-43c7-b102-c85ca1378750" start-date="2016-01-21" start-time="09:30:00" end-date="2016-01-21" end-time="10:45:00">
+            <rapla:repeating type="weekly"/>
+         </rapla:appointment>
+         <rapla:allocate idref="r8fa4d22-1f07-4ef7-a248-5dc644588fd6"/>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:allocate idref="r9427474-3f82-4624-adf1-c4f3d7948e55"/>
+         <rapla:allocate idref="r8bf75a5-393f-4b0a-bf43-cb4e1845ab55"/>
+         <rapla:allocate idref="re54c5f0-fb3a-4c55-9b35-5d001e3fdfd6"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e6714d01-0324-4bfd-80c9-b7f0aa59ab3e" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:31:39.0202Z" last-changed="2015-11-23T21:34:37.0253Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Probabalistic Performance analysis of Computer System</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="aa88b968-056b-416c-ab99-5dfb5d47b4a2" start-date="2016-01-19" start-time="11:00:00" end-date="2016-01-19" end-time="12:15:00">
+            <rapla:repeating type="weekly"/>
+         </rapla:appointment>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:allocate idref="r9427474-3f82-4624-adf1-c4f3d7948e55"/>
+         <rapla:allocate idref="re54c5f0-fb3a-4c55-9b35-5d001e3fdfd6"/>
+         <rapla:allocate idref="r8bf75a5-393f-4b0a-bf43-cb4e1845ab55"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e2627e86-86dd-460b-9d37-c9f35f743196" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:31:39.0202Z" last-changed="2015-11-23T21:34:44.0831Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Probabalistic Performance analysis of Computer System</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a9fa7a02-fc80-4369-ab40-33ebefb227f7" start-date="2016-01-21" start-time="11:00:00" end-date="2016-01-21" end-time="12:15:00">
+            <rapla:repeating type="weekly"/>
+         </rapla:appointment>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:allocate idref="r9427474-3f82-4624-adf1-c4f3d7948e55"/>
+         <rapla:allocate idref="re54c5f0-fb3a-4c55-9b35-5d001e3fdfd6"/>
+         <rapla:allocate idref="r8bf75a5-393f-4b0a-bf43-cb4e1845ab55"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e8cf875b-867c-48f1-9992-0457ef075588" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:35:14.0576Z" last-changed="2015-11-23T21:36:17.0328Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Contemporary Issues</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a9686fe7-4cf6-4295-bb61-6265c9e6dd1b" start-date="2016-01-19" start-time="12:30:00" end-date="2016-01-19" end-time="13:20:00">
+            <rapla:repeating type="weekly"/>
+         </rapla:appointment>
+         <rapla:allocate idref="r79e09df-1858-4345-8c27-f3c5d385c56f"/>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:allocate idref="re54c5f0-fb3a-4c55-9b35-5d001e3fdfd6"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="ef2f8a02-eddf-407f-b87d-bc4fc96852a6" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:36:34.0972Z" last-changed="2015-11-23T21:38:00.0501Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Operating Systems</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a5b7c2ff-c324-438c-aa55-4cdffc220c2c" start-date="2016-01-19" start-time="14:00:00" end-date="2016-01-19" end-time="15:15:00">
+            <rapla:repeating type="weekly"/>
+         </rapla:appointment>
+         <rapla:allocate idref="r3820eb7-cad7-4adf-b19b-51395fdfc544"/>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:allocate idref="r9427474-3f82-4624-adf1-c4f3d7948e55"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e117fb54-b4ed-46ad-b6d0-84a3993a905b" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-11-23T21:36:34.0972Z" last-changed="2015-11-23T21:38:09.0151Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Operating Systems</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a3972639-7c77-4631-b555-59ab982af5a0" start-date="2016-01-21" start-time="14:00:00" end-date="2016-01-21" end-time="15:15:00">
+            <rapla:repeating type="weekly"/>
+         </rapla:appointment>
+         <rapla:allocate idref="r3820eb7-cad7-4adf-b19b-51395fdfc544"/>
+         <rapla:allocate idref="rf326f98-5296-4429-b30e-f601c5068dca"/>
+         <rapla:allocate idref="r9427474-3f82-4624-adf1-c4f3d7948e55"/>
          <rapla:permission group="category[key='read-events-from-others']" access="read"/>
       </rapla:reservation>
    </rapla:reservations>
