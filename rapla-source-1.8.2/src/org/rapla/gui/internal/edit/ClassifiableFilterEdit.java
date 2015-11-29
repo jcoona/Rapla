@@ -163,14 +163,14 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent
 
         for (int i=0;i<types.length;i++) {
             String classificationType = types[i].getAnnotation( DynamicTypeAnnotations.KEY_CLASSIFICATION_TYPE);
-            if ( !classificationType.equals( lastClassificationType)) {
+            if ( false){//!classificationType.equals( lastClassificationType)) {
                 tableLayout.insertRow( row, 2);
                 row ++;
                 lastClassificationType = classificationType;
                 tableLayout.insertRow( row, TableLayout.MINIMUM);
                 content.add( getClassificationTitle( classificationType),"0,"+ row +",1," + row) ;
                 
-                if ( false)//i== 0 )
+                if ( i== 0 )
                 {
                   
                     everythingButton.setSelected( true);
@@ -235,7 +235,7 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent
             checkBox.setSelected( true );
             //content.add( checkBox , "0," + (row + 1) + ",l,t");
             filterEdit[i] = new ClassificationEdit(getContext(), scrollPane);
-            final ClassificationEdit edit = filterEdit[i];
+            ClassificationEdit edit = filterEdit[i];				//this was previously a FINAL variable, but I disagree with that because it is updated once for each available resourse type
             content.add( edit.getNewComponent() , "2," + (row + 1));
             content.add( edit.getRulesComponent() , "0," + (row + 2) + ",2,"+ (row + 2));
             content.add( new JPanel() , "0," + (row + 4) + ",2,"  + (row + 4));
