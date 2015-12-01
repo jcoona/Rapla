@@ -235,10 +235,10 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent
             checkBox.setSelected( true );
             //content.add( checkBox , "0," + (row + 1) + ",l,t");
             filterEdit[i] = new ClassificationEdit(getContext(), scrollPane);
-            ClassificationEdit edit = filterEdit[i];				//this was previously a FINAL variable, but I disagree with that because it is updated once for each available resourse type
+            ClassificationEdit edit = filterEdit[0];				//this was previously a FINAL variable, but I disagree with that because it is updated once for each available resourse type
             content.add( edit.getNewComponent() , "2," + (row + 1));
             content.add( edit.getRulesComponent() , "0," + (row + 2) + ",2,"+ (row + 2));
-            content.add( new JPanel() , "0," + (row + 4) + ",2,"  + (row + 4));
+            //content.add( new JPanel() , "0," + (row + 4) + ",2,"  + (row + 4));
             edit.addChangeListener(new ChangeListener() {
                 
                 public void stateChanged(ChangeEvent e) {
@@ -401,7 +401,8 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
     }
 
     public JComponent getRulesComponent() {
-        return ruleListPanel;
+        if(ruleList.size()!=0) return ruleList.get(0);
+        return null;
     }
 
     public JComponent getNewComponent() {
