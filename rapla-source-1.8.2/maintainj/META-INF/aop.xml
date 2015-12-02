@@ -7,6 +7,7 @@
 	</aspects>
 	<weaver options="-proceedOnError -nowarn -XaddSerialVersionUID  -Xset:makeTjpFieldsTransient=true -Xset:avoidFinal=true">
 		<include within="org.rapla..*"/>
+		<include within="se..*"/>
 		<include within="org.rapla.bootstrap.RaplaStandaloneLoader"/>
 		<exclude within="*ObjectFactory"/>
 		<exclude within="*..*CGLIB*"/>

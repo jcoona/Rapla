@@ -1271,7 +1271,7 @@ protected void calculateSize (Container container)
 
 public void layoutContainer (Container container)
 {
-    int x, y; // Coordinates of the currnet component in pixels
+    int x, y; // Coordinates of the current component in pixels
     int w, h; // Width and height of the current component in pixels
 
     // Calculate sizes if container has changed size or components were added

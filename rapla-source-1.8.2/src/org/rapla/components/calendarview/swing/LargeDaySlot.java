@@ -35,6 +35,12 @@ import org.rapla.components.calendarview.swing.scaling.IRowScale;
 /** Komponente, welche eine beliebige anzahl von Slot-komponenten zusammenfasst.
 * die slots koennen zur laufzeit hinzugefuegt oder auch dynamisch bei bedarf
 *erzeugt werden. sie werden horizontal nebeneinander angeordnet.
+*
+*Google Translate:
+*
+*Component, which summarizes any number of slot components.
+*The slots can be added at runtime or dynamically when needed
+*be generated. they are arranged horizontally next to each other.
 */
 class LargeDaySlot extends AbstractDaySlot 
 {
