@@ -77,7 +77,7 @@ Collection<RaplaObject> selectedObjects;
  */
   public void textEntered(SearchTextField textField){
 	  String enteredText = textField.getValue();
-	  _searchButton.setSearchText(enteredText);
+	  get_searchButton().setSearchText(enteredText);
   }
   
 /**
@@ -93,11 +93,19 @@ Collection<RaplaObject> selectedObjects;
  * @param button
  */
   public void addSearchButton(SearchButton button){
-	  _searchButton = button;
+	  set_searchButton(button);
   }
   
   public void addFilterButton(FilterEditButton filterButton){
 	  _filterButton = filterButton;
   }
+
+public SearchButton get_searchButton() {
+	return _searchButton;
+}
+
+public void set_searchButton(SearchButton _searchButton) {
+	this._searchButton = _searchButton;
+}
 
 }

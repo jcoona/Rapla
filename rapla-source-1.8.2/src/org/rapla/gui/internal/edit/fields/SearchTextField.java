@@ -14,6 +14,7 @@ import javax.swing.JScrollPane;
 import javax.swing.text.JTextComponent;
 
 import org.rapla.framework.RaplaContext;
+import org.rapla.framework.RaplaException;
 /**
  * Here is an enhancement for faster searching methods. This class
  * generates a text field for the user to type in search criteria.
@@ -74,9 +75,17 @@ public class SearchTextField extends TextField implements ActionListener,FocusLi
  * This will tell the controller to perform the text entered function, which will pass the input to the search button.
  */
     public void keyReleased(KeyEvent evt){
+    	//Pressing enter has the same effect as clicking the search button
+    	if((int)evt.getKeyChar()==10)	//10 is the character code for 'enter'. This is a bit of a workaround instead of adding an ActionListener, because rapla's textfield does not extend JTextField.
+    	{
+    		try {
+    			controller.buttonPressed(controller.get_searchButton());
+    		} catch (RaplaException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+    	}
     	//System.out.println(currentString); //for testing
     	controller.textEntered(this);
     }
-   
-
 }
