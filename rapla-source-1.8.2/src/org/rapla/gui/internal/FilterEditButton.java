@@ -88,6 +88,7 @@ public class FilterEditButton extends RaplaGUIComponent
     public FilterEditButton(final RaplaContext context,final ClassifiableFilter filter, final ChangeListener listener, final boolean  isResourceSelection, SearchController searchController){
     	this(context, filter, listener, isResourceSelection);
     	this.searchController = searchController;
+    	searchController.addFilterButton(this);
     }
     
     public ClassifiableFilterEdit getFilterUI()

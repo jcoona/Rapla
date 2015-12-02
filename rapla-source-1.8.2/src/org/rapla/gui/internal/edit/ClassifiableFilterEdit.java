@@ -110,6 +110,10 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent
         nothingButton.setIcon( getIcon("icon.all-unchecked"));
     }
     
+    public DynamicType[] getTypes(){
+    	return types;
+    }
+    
     public JComponent getClassificationTitle(String classificationType) {
         JLabel title = new JLabel( classificationType );
         title.setFont( title.getFont().deriveFont( Font.BOLD ));

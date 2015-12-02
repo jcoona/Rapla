@@ -8,14 +8,23 @@ package org.rapla.gui.internal.edit.fields;
 
 import java.awt.Component;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 import java.util.Scanner;
 
 import org.rapla.entities.RaplaObject;
+import org.rapla.entities.dynamictype.DynamicType;
+import org.rapla.entities.dynamictype.DynamicTypeAnnotations;
 import org.rapla.facade.CalendarSelectionModel;
+import org.rapla.gui.RaplaGUIComponent;
+import org.rapla.gui.internal.FilterEditButton;
 import org.rapla.gui.internal.edit.ClassifiableFilterEdit;
+import org.rapla.facade.RaplaComponent;
+import org.rapla.framework.RaplaContext;
+import org.rapla.framework.RaplaException;
 
-public class SearchController{
+public class SearchController extends RaplaGUIComponent{
 /**
  * Search Controller acts as a controller mechanism that makes a text field and button cooperate.
  * In our specific enhancement, this will combine the efforts of the resource search bar and 
@@ -29,6 +38,7 @@ public class SearchController{
 private CalendarSelectionModel _model;
 private SearchTextField _searchTextField;
 private SearchButton _searchButton;
+private FilterEditButton _filterButton;
 private ClassifiableFilterEdit _filterEdit;
 
 Collection<RaplaObject> selectedObjects;
@@ -37,22 +47,27 @@ Collection<RaplaObject> selectedObjects;
  * Main constructor for the class. Will connect to the main software model.
  * @param model - The software model.
  */
-  public SearchController(CalendarSelectionModel model){
+  public SearchController(CalendarSelectionModel model, RaplaContext context){
+	super(context);
     this._model = model;
-    this.selectedObjects = model.getSelectedObjects();
   }
 
 /**
  * When a button is pressed, we want to transfer its related text to perform a filter action.
  * @param button - the button that was clicked
+ * @throws RaplaException 
  */
-  public void buttonPressed(SearchButton button)
+  public void buttonPressed(SearchButton button) throws RaplaException
   {
     String searchText = button.getSearchText();
-    System.out.println(searchText); 
-    //for now, just printing to console to ensure that collecting text works
-    //it does!
-    //Now connect to the software! (:
+    //print search text to the console
+    System.out.println(searchText);
+    
+    //generate a list of all resource types; this includes "resource" and "person."
+    List<DynamicType> resourceList = new ArrayList<DynamicType>();
+    resourceList.addAll( Arrays.asList( getQuery().getDynamicTypes( DynamicTypeAnnotations.VALUE_CLASSIFICATION_TYPE_RESOURCE )));
+    resourceList.addAll( Arrays.asList( getQuery().getDynamicTypes( DynamicTypeAnnotations.VALUE_CLASSIFICATION_TYPE_PERSON )));
+    
   }
   
 /**
@@ -81,8 +96,8 @@ Collection<RaplaObject> selectedObjects;
 	  _searchButton = button;
   }
   
-  public void addClassifiableFilterEdit(ClassifiableFilterEdit filterEdit){
-	  _filterEdit = filterEdit;
+  public void addFilterButton(FilterEditButton filterButton){
+	  _filterButton = filterButton;
   }
 
 }

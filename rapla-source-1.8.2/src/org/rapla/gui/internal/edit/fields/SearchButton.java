@@ -8,6 +8,9 @@ import java.awt.event.MouseListener;
 
 import javax.swing.Action;
 
+import org.rapla.framework.RaplaContext;
+import org.rapla.framework.RaplaException;
+import org.rapla.gui.internal.edit.ClassifiableFilterEdit;
 import org.rapla.gui.toolkit.RaplaButton;
 /**
  * Search Button will be used along with the textfield. It will take text from the textfield, and
@@ -21,6 +24,8 @@ public class SearchButton extends RaplaButton implements MouseListener{
 	private String searchText = ""; //text we typed into text field
 	private String containerText;
 	private int style; //large, 
+	private RaplaContext context;
+	private ClassifiableFilterEdit ui;
 	
 	//styles
 	public static int SMALL= -1;
@@ -34,11 +39,14 @@ public class SearchButton extends RaplaButton implements MouseListener{
  * @param text - what the button will say.
  * @param style - size of button.
  * @param controller - controller that cooperates with text field.
+ * @param context
+ * @param isResourceSelected
  */
-	public SearchButton(String text, int style, SearchController controller){
+	public SearchButton(String text, int style, SearchController controller, RaplaContext context, boolean isResourceSelection){
 		super(text, style);
 		this.containerText = text;
 		this.style = style;
+		this.context = context;
 		this.controller = controller;
 		controller.addSearchButton(this);
 		this.addMouseListener(this);
@@ -71,7 +79,12 @@ public class SearchButton extends RaplaButton implements MouseListener{
  */
 	@Override
 	public void mousePressed(MouseEvent e) {
-		controller.buttonPressed(this);
+		try {
+			controller.buttonPressed(this);
+		} catch (RaplaException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 /**
  * Needed for interface. Left empty.
