@@ -18,6 +18,9 @@ Assignment #2: Write up of how to create UML diagrams, in general.
 Assignment #3: Write up of the SearchTextField in MS Word, as well as the SearchEditButton UML.
 Assignment #4: Write up of use case diagram for SearchTextField
 
+Helpful:
+Resource selection is the class that contains the search button components.
+
 Things to check out:
 ClassifiableEdit class, related to adding rules to the overall list of rules to apply to the calendar
 

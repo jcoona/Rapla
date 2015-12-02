@@ -16,6 +16,7 @@ import org.rapla.facade.ClassifiableFilter;
 import org.rapla.framework.RaplaContext;
 import org.rapla.gui.RaplaGUIComponent;
 import org.rapla.gui.internal.edit.ClassifiableFilterEdit;
+import org.rapla.gui.internal.edit.fields.SearchController;
 import org.rapla.gui.toolkit.DialogUI;
 
 public class FilterEditButton extends RaplaGUIComponent
@@ -23,6 +24,7 @@ public class FilterEditButton extends RaplaGUIComponent
     protected RaplaArrowButton filterButton;
     JWindow popup;
     ClassifiableFilterEdit ui;
+    SearchController searchController;
         
     public FilterEditButton(final RaplaContext context,final ClassifiableFilter filter, final ChangeListener listener, final boolean  isResourceSelection) 
     {
@@ -81,6 +83,11 @@ public class FilterEditButton extends RaplaGUIComponent
             
         });
         
+    }
+    
+    public FilterEditButton(final RaplaContext context,final ClassifiableFilter filter, final ChangeListener listener, final boolean  isResourceSelection, SearchController searchController){
+    	this(context, filter, listener, isResourceSelection);
+    	this.searchController = searchController;
     }
     
     public ClassifiableFilterEdit getFilterUI()

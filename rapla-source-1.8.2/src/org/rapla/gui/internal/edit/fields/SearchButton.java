@@ -19,6 +19,7 @@ public class SearchButton extends RaplaButton implements MouseListener{
 	
 	private SearchController controller;
 	private String searchText = ""; //text we typed into text field
+	private String containerText;
 	private int style; //large, 
 	
 	//styles
@@ -36,6 +37,8 @@ public class SearchButton extends RaplaButton implements MouseListener{
  */
 	public SearchButton(String text, int style, SearchController controller){
 		super(text, style);
+		this.containerText = text;
+		this.style = style;
 		this.controller = controller;
 		controller.addSearchButton(this);
 		this.addMouseListener(this);

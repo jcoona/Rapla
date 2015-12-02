@@ -8,9 +8,12 @@ package org.rapla.gui.internal.edit.fields;
 
 import java.awt.Component;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Scanner;
 
+import org.rapla.entities.RaplaObject;
 import org.rapla.facade.CalendarSelectionModel;
+import org.rapla.gui.internal.edit.ClassifiableFilterEdit;
 
 public class SearchController{
 /**
@@ -26,13 +29,17 @@ public class SearchController{
 private CalendarSelectionModel _model;
 private SearchTextField _searchTextField;
 private SearchButton _searchButton;
+private ClassifiableFilterEdit _filterEdit;
+
+Collection<RaplaObject> selectedObjects;
 
 /**
  * Main constructor for the class. Will connect to the main software model.
  * @param model - The software model.
  */
   public SearchController(CalendarSelectionModel model){
-    _model = model;
+    this._model = model;
+    this.selectedObjects = model.getSelectedObjects();
   }
 
 /**
@@ -72,6 +79,10 @@ private SearchButton _searchButton;
  */
   public void addSearchButton(SearchButton button){
 	  _searchButton = button;
+  }
+  
+  public void addClassifiableFilterEdit(ClassifiableFilterEdit filterEdit){
+	  _filterEdit = filterEdit;
   }
 
 }
