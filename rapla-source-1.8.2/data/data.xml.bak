@@ -175,7 +175,7 @@
                   </rapla:mapentry>
                </rapla:map>
             </rapla:entry>
-            <rapla:entry key="org.rapla.showSelection" value="false"/>
+            <rapla:entry key="org.rapla.showSelection" value="true"/>
          </rapla:preferences>
       </rapla:user>
       <rapla:user id="u1fd00da-f366-485e-a7a4-23eb8d9a6607" created-at="2015-09-30T19:48:03.0481Z" last-changed="2015-09-30T20:12:56.0432Z" username="clj13001" password="sha-1:615bcf3b78c35ce89ba5c04706ac742c01dd9435" name="Jackson Connor" email="connor.jackson@uconn.edu" isAdmin="true">

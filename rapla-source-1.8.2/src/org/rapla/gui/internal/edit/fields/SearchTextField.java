@@ -79,7 +79,7 @@ public class SearchTextField extends TextField implements ActionListener,FocusLi
     	if((int)evt.getKeyChar()==10)	//10 is the character code for 'enter'. This is a bit of a workaround instead of adding an ActionListener, because rapla's textfield does not extend JTextField.
     	{
     		try {
-    			controller.buttonPressed(controller.get_searchButton());
+    			controller.buttonPressed(controller.getSearchButton());
     		} catch (RaplaException e) {
     			// TODO Auto-generated catch block
     			e.printStackTrace();
