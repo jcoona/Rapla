@@ -65,25 +65,30 @@ Collection<RaplaObject> selectedObjects;
     String searchText = button.getSearchText();
     //print search text to the console
     System.out.println(searchText);
+    List<Attribute> raplaAttributes = generateAttributeList();
     
-    //generate a list of all resource & attribute types; this includes "resource" and "person."
-    List<DynamicType> resourceList = new ArrayList<DynamicType>();
-    List<Attribute> raplaAttributes = new ArrayList<Attribute>();
-    
-    resourceList.addAll( Arrays.asList( getQuery().getDynamicTypes( DynamicTypeAnnotations.VALUE_CLASSIFICATION_TYPE_RESOURCE )));
-    resourceList.addAll( Arrays.asList( getQuery().getDynamicTypes( DynamicTypeAnnotations.VALUE_CLASSIFICATION_TYPE_PERSON )));
-    
-    int resourceListLength = resourceList.size();
-    
-    for (int i=0; i<resourceListLength; i++){//iterate through all resources in rapla
-    	DynamicType currentResource = resourceList.get(i);
-    	Attribute[] attributeArray = currentResource.getAttributes();
-    	for (int j=0; j<attributeArray.length; j++){//add all those attributes to the attributes array
-    		Attribute currentAttribute = attributeArray[j];
-    		raplaAttributes.add(currentAttribute);
-    	}
-    }
-    
+  }
+  
+  public List<Attribute> generateAttributeList() throws RaplaException{
+	//generate a list of all resource & attribute types; this includes "resource" and "person."
+	    List<DynamicType> resourceList = new ArrayList<DynamicType>();
+	    List<Attribute> raplaAttributes = new ArrayList<Attribute>();
+	    
+	    resourceList.addAll( Arrays.asList( getQuery().getDynamicTypes( DynamicTypeAnnotations.VALUE_CLASSIFICATION_TYPE_RESOURCE )));
+	    resourceList.addAll( Arrays.asList( getQuery().getDynamicTypes( DynamicTypeAnnotations.VALUE_CLASSIFICATION_TYPE_PERSON )));
+	    
+	    int resourceListLength = resourceList.size();
+	    
+	    for (int i=0; i<resourceListLength; i++){//iterate through all resources in rapla
+	    	DynamicType currentResource = resourceList.get(i);
+	    	Attribute[] attributeArray = currentResource.getAttributes();
+	    	for (int j=0; j<attributeArray.length; j++){//add all those attributes to the attributes array
+	    		Attribute currentAttribute = attributeArray[j];
+	    		raplaAttributes.add(currentAttribute);
+	    	}
+	    }
+	    
+	    return raplaAttributes;
   }
   
 /**
