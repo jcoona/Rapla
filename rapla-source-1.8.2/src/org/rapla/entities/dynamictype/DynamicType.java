@@ -18,7 +18,7 @@ import org.rapla.entities.RaplaType;
 import org.rapla.entities.Timestamp;
 import org.rapla.entities.domain.EntityPermissionContainer;
 
-/** In rapla it is possible to dynamicly classify a reservation, resource or person with
+/** In rapla it is possible to dynamically classify a reservation, resource or person with
     customized attributes. You can for example define a dynamicType called <em>room</em> with the
     attributes <em>name</em> and <em>seats</em> and classify all your room-resources as <em>room</em>.
  */
@@ -33,8 +33,8 @@ public interface DynamicType extends  EntityPermissionContainer<DynamicType>,Mul
     Attribute getAttribute(String key);
     void addAttribute(Attribute attribute);
     
-    /** find an attribute in the dynamic type that equals the specified attribute This is usefull if you have the
-     * persistant version of an attribute and want to discover the editable version in the working copy of a dynamic type */
+    /** find an attribute in the dynamic type that equals the specified attribute This is useful if you have the
+     * persistent version of an attribute and want to discover the editable version in the working copy of a dynamic type */
     String findAttribute(Attribute attribute);
     
     boolean hasAttribute(Attribute attribute);
