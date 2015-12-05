@@ -217,7 +217,8 @@ public class MultiCalendarView extends RaplaGUIComponent
 
     public void stateChanged(ChangeEvent e) {
         try {
-            ClassifiableFilterEdit filterUI = filter.getFilterUI();
+        	
+            ClassifiableFilterEdit filterUI = filter.getFilterUI(); //we are no longer interested in the filters associated with the old search button.
             if ( filterUI != null)
             {
             	final ClassificationFilter[] filters = filterUI.getFilters();

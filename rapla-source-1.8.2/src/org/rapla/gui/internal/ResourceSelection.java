@@ -99,11 +99,11 @@ public class ResourceSelection extends RaplaGUIComponent implements RaplaWidget 
         SearchController enhancementController = new SearchController(model, context);
         
         filterEdit = new FilterEditButton(context, model, listener,true, enhancementController);
-        searchTextField = new SearchTextField(context, enhancementController); //adds enhancement to the resource panel
+        searchTextField = new SearchTextField(context, listener, enhancementController); //adds enhancement to the resource panel
         searchButton = new SearchButton("Search",-1, enhancementController, context, true);
         
-        //buttonsPanel.add(filterEdit.getButton(), BorderLayout.EAST);
-        buttonsPanel.add(searchTextField.getComponent(), BorderLayout.EAST);
+        buttonsPanel.add(filterEdit.getButton(), BorderLayout.SOUTH);
+        buttonsPanel.add(searchTextField.getComponent(), BorderLayout.CENTER);
         buttonsPanel.add(searchButton, BorderLayout.WEST);
         
         treeSelection.setToolTipRenderer(getTreeFactory().createTreeToolTipRenderer());
@@ -270,6 +270,7 @@ public class ResourceSelection extends RaplaGUIComponent implements RaplaWidget 
             		updateTree();
             		applyFilter();
             	}
+				
             	else if ( source == treeSelection)
                 {
             		updateChange();

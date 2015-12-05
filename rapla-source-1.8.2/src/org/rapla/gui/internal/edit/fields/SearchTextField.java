@@ -11,8 +11,10 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.event.ChangeListener;
 import javax.swing.text.JTextComponent;
 
+import org.rapla.entities.dynamictype.ClassificationFilter;
 import org.rapla.framework.RaplaContext;
 import org.rapla.framework.RaplaException;
 /**
@@ -32,16 +34,16 @@ public class SearchTextField extends TextField implements ActionListener,FocusLi
     Object oldValue;
     Color currentColor;
     SearchController controller;
+    ChangeListener listener;
 /**
  * Constructor. Will contain a controller that connects it to a search button.	
  * @param context
  * @param controller
  */
-	public SearchTextField(RaplaContext context, SearchController controller) 
+	public SearchTextField(RaplaContext context, ChangeListener listener, SearchController controller) 
     {
-        this( context,"", 1, 15, controller);
-        this.controller = controller;
-        controller.addSearchTextField(this);
+        this( context,"", 1, 15, listener, controller);
+        
     }
  /**
   * Another constructor.  
@@ -49,10 +51,9 @@ public class SearchTextField extends TextField implements ActionListener,FocusLi
   * @param fieldName
   * @param controller
   */
-    public SearchTextField(RaplaContext context,String fieldName, SearchController controller) 
+    public SearchTextField(RaplaContext context,String fieldName, ChangeListener listen, SearchController controller) 
     {
-        this( context,fieldName, 1, 15, controller);
-        this.controller = controller;
+        this( context,fieldName, 1, 15, listen, controller);
     }
 /**
  * And... another constructor.        
@@ -62,10 +63,12 @@ public class SearchTextField extends TextField implements ActionListener,FocusLi
  * @param columns
  * @param controller
  */
-    public SearchTextField(RaplaContext sm,String fieldName, int rows, int columns, SearchController controller) 
+    public SearchTextField(RaplaContext sm,String fieldName, int rows, int columns, ChangeListener listen, SearchController controller) 
     {
     	super(sm, fieldName, rows, columns);
     	this.controller = controller;
+    	controller.addSearchTextField(this);
+    	listener=listen;
     }
 /**
  * This method is invoked when a key is released, when typing search criteria
@@ -88,4 +91,8 @@ public class SearchTextField extends TextField implements ActionListener,FocusLi
     	//System.out.println(currentString); //for testing
     	controller.textEntered(this);
     }
+public ClassificationFilter[] getFilters() 
+{
+	return controller.getFilters();
+}
 }

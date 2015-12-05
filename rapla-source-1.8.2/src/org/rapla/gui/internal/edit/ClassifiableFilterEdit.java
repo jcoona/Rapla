@@ -399,7 +399,7 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
         return listenerList.toArray(new ChangeListener[]{});
     }
 
-    protected void fireFilterChanged() {
+    protected void fireFilterChanged() {	//this one is updated with every keystroke
         if (listenerList.size() == 0)
             return;
         ChangeEvent evt = new ChangeEvent(this);
@@ -418,7 +418,7 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
     }
 
     @SuppressWarnings("unchecked")
-	public void mapFrom(ClassificationFilter filter) {
+	public void mapFrom(ClassificationFilter filter) {	//this is only invoked once when filterbutton is pressed initially
         getRulesComponent().removeAll();
         ruleList.clear();
         getNewComponent().removeAll();
@@ -469,7 +469,7 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
         update();
     }
 
-    public void update() {
+    public void update() {	//this is not continuously invoked as the filter string changes
         ruleListPanel.removeAll();
         int i=0;
         for (Iterator<RuleComponent> it = ruleList.iterator();it.hasNext();) {
@@ -483,7 +483,7 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
         ruleListPanel.repaint();
     }
     
-	public void itemStateChanged(ItemEvent e) {
+	public void itemStateChanged(ItemEvent e) {		//also not called with every keystroke
 		Object item = e.getItem();
         if ( e.getStateChange() != ItemEvent.SELECTED)
         {

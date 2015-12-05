@@ -16,12 +16,16 @@ import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JFrame;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 import org.rapla.entities.RaplaObject;
 import org.rapla.entities.dynamictype.Attribute;
+import org.rapla.entities.dynamictype.ClassificationFilter;
 import org.rapla.entities.dynamictype.DynamicType;
 import org.rapla.entities.dynamictype.DynamicTypeAnnotations;
 import org.rapla.entities.dynamictype.internal.AttributeImpl;
+import org.rapla.entities.dynamictype.internal.ClassificationFilterImpl;
 import org.rapla.facade.CalendarSelectionModel;
 import org.rapla.gui.RaplaGUIComponent;
 import org.rapla.gui.internal.FilterEditButton;
@@ -46,6 +50,7 @@ private SearchTextField _searchTextField;
 private SearchButton _searchButton;
 private FilterEditButton _filterButton;
 private ClassifiableFilterEdit _filterEdit;
+private ArrayList<ClassificationFilter> filters;
 
 Collection<RaplaObject> selectedObjects;
 
@@ -72,15 +77,53 @@ Collection<RaplaObject> selectedObjects;
     List<Attribute> raplaAttributes = generateAttributeList();
     List<DynamicType> reservationList = generateReservationList();
     
-    //makes pop-up in a really strange way; in construction
+    
+    //makes pop-up in a really strange way; in construction //we don't need this right now
+    /*
     JFrame resultFrame = new JFrame("Search Results");
     resultFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     resultFrame.getContentPane().add(button,BorderLayout.CENTER);
     resultFrame.pack();
     resultFrame.setVisible(true);
+    */
+    updateFilters(reservationList, raplaAttributes);
+    performSearch();
   }
   
-  /**
+  private void performSearch() 
+  {
+	  //ClassifiableFilterEdit seems to do this by called stateChanged on its ChangeListener
+	  //So I guess we'll try the same
+	  ChangeListener listener = _searchTextField.listener;
+      ChangeEvent evt = new ChangeEvent(this);
+      listener.stateChanged(evt);
+  }
+
+/**
+   * This bulldozes the list of filters every time the search is called and makes a new one
+   * Could be more efficient, but it works. Maybe.
+   */
+  private void updateFilters(List<DynamicType> reservationList, List<Attribute> raplaAttributes) 
+  {
+	  filters = new ArrayList<ClassificationFilter>();
+	  for(Attribute a: raplaAttributes)
+	  {
+		  if(a != null)
+		  {
+			  ClassificationFilter filter = reservationList.get(0).newClassificationFilter();	//I don't fully understand what types are in rapla, but debugging indicates the list contains only one type at this point, so I will use it to create the filter.
+			  //Our filter needs rules to be added to it.
+			  //rapla uses a two dimensional "conditions" array for this
+			  Object[][] conditions = new Object[1][2];
+			  conditions[0][0]="contains"; //first element is operator
+			  conditions[0][1]=_searchButton.getSearchText(); //second element is the string
+			  filter.setRule(0, a, conditions); //First parameter is index; this is for multiple rules within one filter. We don't use that.
+			  filters.add(filter);
+		  }
+	  }
+	  return;
+  }
+
+/**
    * Generates a list of all the attributes in the Rapla console.
    * @return
    * @throws RaplaException
@@ -154,6 +197,11 @@ public SearchButton getSearchButton() {
 
 public void setSearchButton(SearchButton _searchButton) {
 	this._searchButton = _searchButton;
+}
+
+public ClassificationFilter[] getFilters() 
+{
+	return (ClassificationFilter[]) filters.toArray();
 }
 
 }
