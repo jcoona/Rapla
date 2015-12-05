@@ -270,7 +270,13 @@ public class ResourceSelection extends RaplaGUIComponent implements RaplaWidget 
             		updateTree();
             		applyFilter();
             	}
-				
+				else if ( source instanceof SearchController)
+				{
+					ClassificationFilter[] filters = searchButton.getFilters();
+					model.setAllocatableFilter(filters);
+					updateTree();
+					applyFilter();
+				}
             	else if ( source == treeSelection)
                 {
             		updateChange();

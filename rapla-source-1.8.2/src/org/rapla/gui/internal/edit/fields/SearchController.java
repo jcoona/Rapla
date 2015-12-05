@@ -201,7 +201,13 @@ public void setSearchButton(SearchButton _searchButton) {
 
 public ClassificationFilter[] getFilters() 
 {
-	return (ClassificationFilter[]) filters.toArray();
+	Object[] array = filters.toArray();
+	ClassificationFilter[] f = new ClassificationFilter[array.length];
+	for(int i=0; i<array.length; i++)	
+	{
+		f[i]=(ClassificationFilter)array[i];	//casting the full object[] to a filter[] doesn't work, so I guess we'll do it item by item
+	}
+	return f; 
 }
 
 }

@@ -8,6 +8,7 @@ import java.awt.event.MouseListener;
 
 import javax.swing.Action;
 
+import org.rapla.entities.dynamictype.ClassificationFilter;
 import org.rapla.framework.RaplaContext;
 import org.rapla.framework.RaplaException;
 import org.rapla.gui.internal.edit.ClassifiableFilterEdit;
@@ -85,6 +86,11 @@ public class SearchButton extends RaplaButton implements MouseListener{
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+	}
+	
+	public ClassificationFilter[] getFilters()
+	{
+		return controller.getFilters();
 	}
 /**
  * Needed for interface. Left empty.
