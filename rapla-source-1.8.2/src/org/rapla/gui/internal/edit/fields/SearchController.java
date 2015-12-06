@@ -114,13 +114,10 @@ private String currentSearch; //what we are searching for at the moment
 
      //makes pop-up in a really strange way; in construction
      //makes pop-up in a really strange way; in construction //we don't need this right now
-     /*
-     JFrame resultFrame = new JFrame("Search Results");
-     resultFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-     //resultFrame.getContentPane().add(button,BorderLayout.CENTER);
-     resultFrame.pack();
-     resultFrame.setVisible(true);
-     */
+     
+     SearchPopup searchResults = new SearchPopup("Search Results");
+     searchResults.setVisible(true);
+     
      updateFilters(reservationList, raplaAttributes);
      //performSearch();
    }
