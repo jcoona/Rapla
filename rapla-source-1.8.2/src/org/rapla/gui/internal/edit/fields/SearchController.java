@@ -117,9 +117,29 @@ private String currentSearch; //what we are searching for at the moment
      
      SearchPopup searchResults = new SearchPopup("Search Results");
      searchResults.setVisible(true);
+     List<DisplayableEvent> searchHits = getSearchResults();
+     
+     for (int i=0; i<searchHits.size(); i++){
+    	 DisplayableEvent currentHit = searchHits.get(i);
+    	 currentHit.setLocation(30, 30*(i+1)+20);
+    	 searchResults.add(currentHit);
+     }
      
      updateFilters(reservationList, raplaAttributes);
      //performSearch();
+   }
+   /**
+    * Will get search results. At the moment Just tweaking it to make it display something.
+    * @return
+    */
+   public List<DisplayableEvent> getSearchResults(){
+	   List<DisplayableEvent> eventHits = new ArrayList<DisplayableEvent>();
+	   eventHits.add(new DisplayableEvent("Go to class"));
+	   eventHits.add(new DisplayableEvent("Go to work"));
+	   eventHits.add(new DisplayableEvent("Go to the library"));
+	   
+	   
+	   return eventHits;
    }
   
    /**

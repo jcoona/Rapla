@@ -15,6 +15,7 @@ public class SearchPopup extends JFrame implements KeyListener, WindowListener {
 		super(header);
 		addWindowListener(this);
 		addKeyListener(this);
+		setLayout(null);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setFocusable(true);
 		setSize(400, 600);
