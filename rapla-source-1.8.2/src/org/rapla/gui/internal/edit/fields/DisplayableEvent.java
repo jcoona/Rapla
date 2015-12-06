@@ -13,23 +13,27 @@ import org.rapla.entities.dynamictype.DynamicType;
 import org.rapla.gui.toolkit.RaplaButton;
 
 /**
- * This event will be displayable on the user interface, based on its attribute criteria, such as:
- * Title of event
- * People going to event
- * Location of event
- * ...etc
+ * This will generate an event with text associated with each attribute type, so that it can be displayed.
  * @author clj13001
  *
  */
-public class DisplayableEvent extends JButton {
+public class DisplayableEvent extends JLabel {
 
-	List<DynamicType> attributes;
-	String title;
+	private String[] attributes;
+	private int length;
 	
-	public DisplayableEvent(String title){
-		super(title);
-		Dimension size = getPreferredSize();
-		setSize(size);
-		//setBorder(BorderFactory.createLineBorder(Color.BLACK));
+	public DisplayableEvent(String[] values){
+		if (values.length > 0){
+			this.length = values.length;
+			this.attributes = values;
+		}
+	}
+	
+	public String[] getAttributes(){
+		return attributes;
+	}
+
+	public int getLength(){
+		return length;
 	}
 }

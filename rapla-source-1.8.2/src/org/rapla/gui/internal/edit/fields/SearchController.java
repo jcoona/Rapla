@@ -119,10 +119,18 @@ private String currentSearch; //what we are searching for at the moment
      searchResults.setVisible(true);
      List<DisplayableEvent> searchHits = getSearchResults();
      
-     for (int i=0; i<searchHits.size(); i++){
+     for (int i=0; i<searchHits.size(); i++){//iterates through whole collection of events
     	 DisplayableEvent currentHit = searchHits.get(i);
-    	 currentHit.setLocation(30, 30*(i+1)+20);
-    	 searchResults.add(currentHit);
+    	 String[] attributes = currentHit.getAttributes();
+    	 int width = 0;
+    	 
+    	 for (int j = 0; j<currentHit.getLength(); j++){
+    		 String currentString = attributes[j];
+    		 EventInfoBox eventBox = new EventInfoBox(currentString);
+    		 eventBox.setLocation(30*(j+1)+(10*j)+width, 30*(i+1)+(10*i));
+    		 width += eventBox.getWidth();
+    	 	 searchResults.add(eventBox);
+    	 }
      }
      
      updateFilters(reservationList, raplaAttributes);
@@ -134,11 +142,10 @@ private String currentSearch; //what we are searching for at the moment
     */
    public List<DisplayableEvent> getSearchResults(){
 	   List<DisplayableEvent> eventHits = new ArrayList<DisplayableEvent>();
-	   eventHits.add(new DisplayableEvent("Go to class"));
-	   eventHits.add(new DisplayableEvent("Go to work"));
-	   eventHits.add(new DisplayableEvent("Go to the library"));
-	   
-	   
+	   eventHits.add(new DisplayableEvent(new String[] {"Connor's Party", "Connor's House", "Connor Jackson", "Adam Claxton"}));
+	   eventHits.add(new DisplayableEvent(new String[] {"Study Group Meeting", "ITE 138", "Connor Jackson", "Maegan Dyakiw"}));
+	   eventHits.add(new DisplayableEvent(new String[] {"Vacation to Vermont", "Vermont", "John Costa"}));
+	  
 	   return eventHits;
    }
   
