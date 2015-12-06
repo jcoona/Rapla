@@ -10,7 +10,7 @@ import javax.swing.JComboBox;
  * @author Jackson
  *
  */
-public class ResourceDropBox extends JComboBox implements MouseListener{
+public class ResourceDropBox extends JComboBox{
 	
 	SearchController controller; //its controller
 	String[] menuOptions; //the values in the drop box
@@ -27,27 +27,7 @@ public class ResourceDropBox extends JComboBox implements MouseListener{
 		this.controller = controller;
 		if (resourceNames.length >= 1)
 				this.currentSelection = resourceNames[0];
-		this.addMouseListener(this);
 		controller.addResourceDropBox(this);
 	}
-
-	@Override
-	public void mouseClicked(MouseEvent e) {}
-/**
- * When you click on the combo box, we want to update the current selected value in the controller class.
- */
-	@Override
-	public void mousePressed(MouseEvent e) {
-		controller.menuOptionChosen(this);
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {}
-
-	@Override
-	public void mouseExited(MouseEvent e) {}
 	
 }

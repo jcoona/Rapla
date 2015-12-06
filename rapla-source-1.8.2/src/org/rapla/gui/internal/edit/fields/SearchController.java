@@ -80,8 +80,8 @@ private String currentSearch; //what we are searching for at the moment
 	    
 	    for (int i=0;i<checkBoxes.length;i++){
 	    	JCheckBox currentBox = checkBoxes[i];
-	    	String resource = currentBox.getText();
-	    	resources[i] = new SearchResource(resource, resourceList.get(i).getKey());
+	    	String resourceName = currentBox.getText();
+	    	resources[i] = new SearchResource(resourceName, resourceList.get(i).getKey());
 	    }
 	    this.resourceObjects = resources;
 }
@@ -166,7 +166,7 @@ private String currentSearch; //what we are searching for at the moment
     resultFrame.setVisible(true);
     */
     updateFilters(reservationList, raplaAttributes);
-    performSearch();
+    //performSearch();
   }
   
   private void performSearch() 
