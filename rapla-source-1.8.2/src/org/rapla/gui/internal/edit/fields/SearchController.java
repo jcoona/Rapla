@@ -1,9 +1,3 @@
-/// Homework 9: Rythminator Part 3
-/// CSE 1102: Object Oriented Design and Programming
-/// Connor Jackson
-/// TA: Aditya Dhakal
-/// Creation Date: April 30th, 2014
-
 package org.rapla.gui.internal.edit.fields;
 
 import java.awt.BorderLayout;
