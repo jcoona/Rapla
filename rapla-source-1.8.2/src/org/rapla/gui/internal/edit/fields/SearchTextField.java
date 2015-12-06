@@ -88,8 +88,6 @@ public class SearchTextField extends TextField implements ActionListener,FocusLi
     			e.printStackTrace();
     		}
     	}
-    	//System.out.println(currentString); //for testing
-    	controller.textEntered(this);
     }
 public ClassificationFilter[] getFilters() 
 {

@@ -14,6 +14,7 @@ import javax.swing.event.ChangeListener;
 import org.rapla.components.calendar.RaplaArrowButton;
 import org.rapla.facade.ClassifiableFilter;
 import org.rapla.framework.RaplaContext;
+import org.rapla.framework.RaplaException;
 import org.rapla.gui.RaplaGUIComponent;
 import org.rapla.gui.internal.edit.ClassifiableFilterEdit;
 import org.rapla.gui.internal.edit.fields.SearchController;
@@ -82,13 +83,20 @@ public class FilterEditButton extends RaplaGUIComponent
             }
             
         });
-        
+        ui = new ClassifiableFilterEdit( context, isResourceSelection);
+        try {
+			ui.setFilter( filter);
+		} catch (RaplaException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+        ui.addChangeListener(listener);
     }
     
     public FilterEditButton(final RaplaContext context,final ClassifiableFilter filter, final ChangeListener listener, final boolean  isResourceSelection, SearchController searchController){
     	this(context, filter, listener, isResourceSelection);
     	this.searchController = searchController;
-    	searchController.addFilterButton(this);
+    	searchController.addFilter(this);
     }
     
     public ClassifiableFilterEdit getFilterUI()

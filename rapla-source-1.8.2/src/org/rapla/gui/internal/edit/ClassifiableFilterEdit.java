@@ -365,6 +365,10 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent
         return scrollPane;
     }
 
+	public JCheckBox[] getCheckBoxes() {
+		return checkBoxes;
+	}
+
 }
 
 

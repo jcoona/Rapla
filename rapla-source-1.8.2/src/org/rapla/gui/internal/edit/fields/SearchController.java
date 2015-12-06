@@ -15,6 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -47,12 +48,16 @@ public class SearchController extends RaplaGUIComponent{
  */
 private CalendarSelectionModel _model;
 private SearchTextField _searchTextField;
-private SearchButton _searchButton;
-private FilterEditButton _filterButton;
+private SearchButton _searchButton; //not needed
+private ResourceDropBox _dropbox;
+private RaplaContext _context;
 private ClassifiableFilterEdit _filterEdit;
 private ArrayList<ClassificationFilter> filters;
 
-Collection<RaplaObject> selectedObjects;
+private String currentResourceTitle; //dropbox option we want to search for
+private List<DynamicType> resourceList; //resource data structure based on what rapla designers made
+private SearchResource[] resourceObjects; //resource structure with dynamictype and actual name as values
+private String currentSearch; //what we are searching for at the moment
 
 /**
  * Main constructor for the class. Will connect to the main software model.
@@ -62,7 +67,81 @@ Collection<RaplaObject> selectedObjects;
 	super(context);
     this._model = model;
   }
+  /**
+   * This creates an array of resources, where it has two values:
+   * a) its dynamic type value. (resource1, resource2...)
+   * b) its actual name (location, goals...)
+   * @throws RaplaException
+   */
+  public void generateResourceObjects() throws RaplaException{
+	    JCheckBox[] checkBoxes = _filterEdit.getCheckBoxes();
+	    
+	    SearchResource[] resources = new SearchResource[checkBoxes.length];
+	    
+	    for (int i=0;i<checkBoxes.length;i++){
+	    	JCheckBox currentBox = checkBoxes[i];
+	    	String resource = currentBox.getText();
+	    	resources[i] = new SearchResource(resource, resourceList.get(i).getKey());
+	    }
+	    this.resourceObjects = resources;
+}
+  
+  /**
+   * This gets the actual names of all resource instances. 
+   * @return
+   * @throws RaplaException
+   */
+   public String[] getResourceNames() throws RaplaException{
+ 	  generateResourceList();
+ 	  generateResourceObjects();
+ 	  String[] actualNames = new String[resourceList.size()];
+ 		for (int i=0; i<resourceList.size(); i++){
+ 			SearchResource currentResource = resourceObjects[i];
+ 			actualNames[i] = currentResource.getActualName();
+ 		}
+ 		return actualNames;
+   }
+   
+   /**
+    * Method is called when user presses enter when typing in search criteria in the search bar.
+    * This will go through and search through Rapla.
+    * @param textfield
+    * @throws RaplaException
+    */
+   public void pressedEnter(SearchTextField textfield) throws RaplaException
+   {
+     String searchText = textfield.getValue();
+     String searchChoice = (String) _dropbox.getSelectedItem();
+     //print search text to the console
+     System.out.println(searchText + " " + searchChoice);
+     
+     List<Attribute> raplaAttributes = generateAttributeList();
+     List<DynamicType> reservationList = generateReservationList();
 
+     //makes pop-up in a really strange way; in construction
+     //makes pop-up in a really strange way; in construction //we don't need this right now
+     /*
+     JFrame resultFrame = new JFrame("Search Results");
+     resultFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+     //resultFrame.getContentPane().add(button,BorderLayout.CENTER);
+     resultFrame.pack();
+     resultFrame.setVisible(true);
+     */
+     updateFilters(reservationList, raplaAttributes);
+     //performSearch();
+   }
+  
+   /**
+    * Generates a list of all resources in Rapla. This is the structure that Rapla has made.
+    * @throws RaplaException
+    */
+   public void generateResourceList() throws RaplaException{
+ 	  List<DynamicType> resourceList = new ArrayList<DynamicType>();
+ 	  resourceList.addAll(Arrays.asList(getQuery().getDynamicTypes(DynamicTypeAnnotations.VALUE_CLASSIFICATION_TYPE_RESOURCE)));
+ 	  resourceList.addAll(Arrays.asList(getQuery().getDynamicTypes(DynamicTypeAnnotations.VALUE_CLASSIFICATION_TYPE_PERSON)));
+ 	  this.resourceList = resourceList;
+   }
+   
 /**
  * When a button is pressed, we want to transfer its related text to perform a filter action.
  * @param button - the button that was clicked
@@ -130,7 +209,7 @@ Collection<RaplaObject> selectedObjects;
    */
   public List<Attribute> generateAttributeList() throws RaplaException{
 	//generate a list of all resource & attribute types; this includes "resource" and "person."
-	    List<DynamicType> resourceList = new ArrayList<DynamicType>();
+	    generateResourceList();
 	    List<Attribute> raplaAttributes = new ArrayList<Attribute>();
 	    
 	    resourceList.addAll(Arrays.asList(getQuery().getDynamicTypes(DynamicTypeAnnotations.VALUE_CLASSIFICATION_TYPE_RESOURCE)));
@@ -161,6 +240,14 @@ Collection<RaplaObject> selectedObjects;
 	return reservationList;
   }
   
+  /**
+   * Updates the chosen resource type based on when the user clicks on the combo box.
+   * @param dropbox
+   */
+  public void menuOptionChosen(ResourceDropBox dropbox){
+	  currentResourceTitle = dropbox.getName();
+  }
+  
 /**
  * When text is entered, we want to connect that subsequent string of characters to the search button,
  * that will be pressed when search criteria is finished being typed.
@@ -187,12 +274,20 @@ Collection<RaplaObject> selectedObjects;
 	  setSearchButton(button);
   }
   
-  public void addFilterButton(FilterEditButton filterButton){
-	  _filterButton = filterButton;
+  public void addFilter(FilterEditButton filterButton){
+	  _filterEdit = filterButton.getFilterUI();
   }
 
 public SearchButton getSearchButton() {
 	return _searchButton;
+}
+
+/**
+ * Associates a drop box with the controller.
+ * @param dropbox
+ */
+public void addResourceDropBox(ResourceDropBox dropbox){
+	  this._dropbox = dropbox;
 }
 
 public void setSearchButton(SearchButton _searchButton) {

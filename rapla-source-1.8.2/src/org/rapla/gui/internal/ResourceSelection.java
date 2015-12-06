@@ -53,6 +53,7 @@ import org.rapla.gui.internal.action.RaplaObjectAction;
 import org.rapla.gui.internal.common.InternMenus;
 import org.rapla.gui.internal.common.MultiCalendarView;
 import org.rapla.gui.internal.edit.ClassifiableFilterEdit;
+import org.rapla.gui.internal.edit.fields.ResourceDropBox;
 import org.rapla.gui.internal.edit.fields.SearchButton;
 import org.rapla.gui.internal.edit.fields.SearchController;
 import org.rapla.gui.internal.edit.fields.SearchTextField;
@@ -78,6 +79,7 @@ public class ResourceSelection extends RaplaGUIComponent implements RaplaWidget 
     protected FilterEditButton filterEdit;
     protected SearchTextField  searchTextField;
     protected SearchButton searchButton;
+    protected ResourceDropBox dropbox;
 
 	public ResourceSelection(RaplaContext context, MultiCalendarView view, CalendarSelectionModel model) throws RaplaException {
         super(context);
@@ -101,10 +103,12 @@ public class ResourceSelection extends RaplaGUIComponent implements RaplaWidget 
         filterEdit = new FilterEditButton(context, model, listener,true, enhancementController);
         searchTextField = new SearchTextField(context, listener, enhancementController); //adds enhancement to the resource panel
         searchButton = new SearchButton("Search",-1, enhancementController, context, true);
+        dropbox = new ResourceDropBox(enhancementController.getResourceNames(),enhancementController);
         
-        buttonsPanel.add(filterEdit.getButton(), BorderLayout.SOUTH);
+        //buttonsPanel.add(filterEdit.getButton(), BorderLayout.SOUTH);
         buttonsPanel.add(searchTextField.getComponent(), BorderLayout.CENTER);
-        buttonsPanel.add(searchButton, BorderLayout.WEST);
+        //buttonsPanel.add(searchButton, BorderLayout.WEST);
+        buttonsPanel.add(dropbox, BorderLayout.WEST);
         
         treeSelection.setToolTipRenderer(getTreeFactory().createTreeToolTipRenderer());
         treeSelection.setMultiSelect(true);
