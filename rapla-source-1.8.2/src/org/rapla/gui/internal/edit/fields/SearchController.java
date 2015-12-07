@@ -100,9 +100,17 @@ private String currentSearch; //what we are searching for at the moment
  		return actualNames;
    }
    
-   public void createRules(String searchChoice){
+   public void createRules(String searchChoice, Boolean[] isChecked, JComboBox[] attributeSelectors){
 	   for (int i = 0; i<resourceList.size(); i++){
-		   
+		   if (isChecked[i].equals(true)){
+			   JComboBox currentBox = attributeSelectors[i];
+			   DynamicType currentResource = resourceList.get(i);
+			   Attribute[] attributeArray = currentResource.getAttributes();
+			   
+		    	for (int j=0; j<attributeArray.length; j++){//add all those attributes to the attributes array
+		    		currentBox.setSelectedIndex(j);
+		    	}
+		   }
 	   }
    }
    
@@ -121,15 +129,15 @@ private String currentSearch; //what we are searching for at the moment
      System.out.println(searchText + " " + searchChoice);
      
      //Edit checkbox based on what resource we typed in.
-     _filterEdit.updateCheckboxes(searchChoice);
+     Boolean[] isChecked = _filterEdit.updateCheckboxes(searchChoice);
      
      //Edit the comboboxes
      JComboBox[] attributeSelectors = _filterEdit.getAttributeSelectors();
      generateResourceList();
-     createRules(searchChoice);
+     createRules(searchChoice, isChecked, attributeSelectors);
      
-     attributeSelectors[0].setSelectedIndex(0);
-     Attribute test =  (Attribute)attributeSelectors[0].getSelectedItem();
+     //attributeSelectors[0].setSelectedIndex(0);
+     //Attribute test =  (Attribute)attributeSelectors[0].getSelectedItem();
      //_filterEdit).autoRuleRow(test);
      //test = (String) attributeSelectors[0].getItemAt(0);
      

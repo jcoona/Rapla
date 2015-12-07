@@ -118,9 +118,10 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent implements ActionL
 				checkBoxes[i].setSelected(true);
 				isChecked[i] = true;
 			}
-			else
+			else{
 				checkBoxes[i].setSelected(false);
 				isChecked[i] = false;
+			}
 		}
 		return isChecked;
 	}
