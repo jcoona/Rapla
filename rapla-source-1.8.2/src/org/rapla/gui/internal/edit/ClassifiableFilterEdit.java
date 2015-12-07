@@ -84,6 +84,7 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent implements ActionL
 	JScrollPane scrollPane;
 	JCheckBox[] checkBoxes;
 	ClassificationEdit[] filterEdit;
+	JComboBox[] attributeSelectors;
 	DynamicType[] types;
 	boolean isResourceSelection;
 
@@ -280,6 +281,7 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent implements ActionL
 		setTypes(list.toArray(DynamicType.DYNAMICTYPE_ARRAY));
 
 		mapFromIntern(filter, false);
+		attributeSelectors = this.getAttributeSelectors();
 	}
 
 	private void mapFromIntern(ClassifiableFilter classifiableFilter, boolean deselectAllIfFilterIsNull)
@@ -357,6 +359,16 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent implements ActionL
 		return checkBoxes;
 	}
 
+	public JComboBox[] getAttributeSelectors() {
+		JComboBox[] comboBoxes = new JComboBox[filterEdit.length];
+		for (int i = 0; i < filterEdit.length; i++) {
+			ClassificationEdit currentFilter = filterEdit[i];
+			JComboBox currentComboBox = currentFilter.getComboBox();
+			comboBoxes[i] = currentComboBox;
+		}
+		return comboBoxes;
+	}
+
 }
 
 class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
@@ -381,6 +393,10 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 
 	public void addChangeListener(ChangeListener listener) {
 		listenerList.add(listener);
+	}
+
+	public JComboBox getComboBox() {
+		return attributeSelector;
 	}
 
 	public void removeChangeListener(ChangeListener listener) {

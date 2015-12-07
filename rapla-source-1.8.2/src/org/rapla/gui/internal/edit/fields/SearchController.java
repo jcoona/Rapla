@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollBar;
@@ -115,6 +116,11 @@ private String currentSearch; //what we are searching for at the moment
      
      //Edit checkbox based on what resource we typed in.
      _filterEdit.updateCheckboxes(searchChoice);
+     
+     //Edit the comboboxes
+     JComboBox[] attributeSelectors = _filterEdit.getAttributeSelectors();
+     String test = (String) attributeSelectors[0].getSelectedItem();
+     test = (String) attributeSelectors[0].getItemAt(0);
      
      //Lets get all the rapla attributes and all the events
      List<Attribute> raplaAttributes = generateAttributeList();
