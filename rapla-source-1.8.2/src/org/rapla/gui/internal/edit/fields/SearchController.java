@@ -11,6 +11,9 @@ import java.util.Scanner;
 
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
@@ -104,21 +107,27 @@ private String currentSearch; //what we are searching for at the moment
     */
    public void pressedEnter(SearchTextField textfield) throws RaplaException
    {
+	 //FIRST, lets connect the text in the field to the selected resource.
      String searchText = textfield.getValue();
      String searchChoice = (String) _dropbox.getSelectedItem();
      //print search text to the console
      System.out.println(searchText + " " + searchChoice);
      
+     //Edit checkbox based on what resource we typed in.
+     _filterEdit.updateCheckboxes(searchChoice);
+     
+     //Lets get all the rapla attributes and all the events
      List<Attribute> raplaAttributes = generateAttributeList();
      List<DynamicType> reservationList = generateReservationList();
-
-     //makes pop-up in a really strange way; in construction
-     //makes pop-up in a really strange way; in construction //we don't need this right now
      
+     //Then make a popup come up.
      SearchPopup searchResults = new SearchPopup("Search Results");
      searchResults.setVisible(true);
+     
+     //Get all the search results
      List<DisplayableEvent> searchHits = getSearchResults();
      
+     //Add the search results to the window
      for (int i=0; i<searchHits.size(); i++){//iterates through whole collection of events
     	 DisplayableEvent currentHit = searchHits.get(i);
     	 String[] attributes = currentHit.getAttributes();

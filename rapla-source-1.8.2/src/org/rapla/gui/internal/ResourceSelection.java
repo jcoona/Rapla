@@ -105,7 +105,7 @@ public class ResourceSelection extends RaplaGUIComponent implements RaplaWidget 
         searchButton = new SearchButton("Search",-1, enhancementController, context, true);
         dropbox = new ResourceDropBox(enhancementController.getResourceNames(),enhancementController);
         
-        //buttonsPanel.add(filterEdit.getButton(), BorderLayout.SOUTH);
+        buttonsPanel.add(filterEdit.getButton(), BorderLayout.SOUTH);
         buttonsPanel.add(searchTextField.getComponent(), BorderLayout.CENTER);
         //buttonsPanel.add(searchButton, BorderLayout.WEST);
         buttonsPanel.add(dropbox, BorderLayout.WEST);

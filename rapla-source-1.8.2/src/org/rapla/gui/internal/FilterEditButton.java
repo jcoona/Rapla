@@ -49,7 +49,7 @@ public class FilterEditButton extends RaplaGUIComponent
                     {
                         ui.removeChangeListener( listener);
                     }
-                    ui = new ClassifiableFilterEdit( context, isResourceSelection);
+                    //ui = new ClassifiableFilterEdit( context, isResourceSelection);
                     if ( listener != null)
                     {
                     	ui.addChangeListener(listener);
