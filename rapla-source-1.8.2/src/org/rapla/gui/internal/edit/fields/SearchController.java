@@ -119,8 +119,10 @@ private String currentSearch; //what we are searching for at the moment
      
      //Edit the comboboxes
      JComboBox[] attributeSelectors = _filterEdit.getAttributeSelectors();
-     Object test =  attributeSelectors[0].getModel();
-     test = (String) attributeSelectors[0].getItemAt(0);
+     attributeSelectors[0].setSelectedIndex(0);
+     Attribute test =  (Attribute)attributeSelectors[0].getSelectedItem();
+     //_filterEdit).autoRuleRow(test);
+     //test = (String) attributeSelectors[0].getItemAt(0);
      
      //Lets get all the rapla attributes and all the events
      List<Attribute> raplaAttributes = generateAttributeList();

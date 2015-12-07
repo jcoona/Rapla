@@ -369,6 +369,11 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent implements ActionL
 		return comboBoxes;
 	}
 
+	public void autoRuleRow(Attribute test) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
 
 class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
@@ -467,7 +472,7 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 		newPanel.add(attributeSelector, "0,0,f,c");
 		newLabel.setText(getString("new_rule"));
 		newLabel.setVisible(false);
-		//attributeSelector.setSelectedItem(null);
+		attributeSelector.setSelectedItem(null);
 		Iterator<? extends ClassificationFilterRule> it = filter.ruleIterator();
 		while (it.hasNext()) {
 			ClassificationFilterRule rule = it.next();
@@ -522,6 +527,30 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 
 	}
 
+	public void autoRuleRow(Attribute att)
+	{
+		//immitation of ItemStateChanged
+		if (att != null) {
+			RuleComponent ruleComponent = getComponent(att);
+			final RuleRow row;
+			if (ruleComponent == null) {
+				ruleComponent = new RuleComponent(att);
+				ruleList.add(ruleComponent);
+			}
+			row = ruleComponent.addOr();
+			final RuleComponent comp = ruleComponent;
+			update();
+
+			// invokeLater prevents a deadlock in jdk <=1.3
+			javax.swing.SwingUtilities.invokeLater(new Runnable() {
+				public void run() {
+					attributeSelector.setSelectedIndex(-1);
+					comp.scrollRowVisible(row);
+				}
+			});
+			fireFilterChanged();
+		}
+	}
 	public ClassificationFilter getFilter() {
 		if (type == null)
 			return null;
