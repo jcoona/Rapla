@@ -119,7 +119,7 @@ private String currentSearch; //what we are searching for at the moment
      
      //Edit the comboboxes
      JComboBox[] attributeSelectors = _filterEdit.getAttributeSelectors();
-     String test = (String) attributeSelectors[0].getSelectedItem();
+     Object test =  attributeSelectors[0].getModel();
      test = (String) attributeSelectors[0].getItemAt(0);
      
      //Lets get all the rapla attributes and all the events

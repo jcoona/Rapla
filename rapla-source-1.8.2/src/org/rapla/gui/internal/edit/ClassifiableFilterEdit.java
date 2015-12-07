@@ -467,7 +467,7 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 		newPanel.add(attributeSelector, "0,0,f,c");
 		newLabel.setText(getString("new_rule"));
 		newLabel.setVisible(false);
-		attributeSelector.setSelectedItem(null);
+		//attributeSelector.setSelectedItem(null);
 		Iterator<? extends ClassificationFilterRule> it = filter.ruleIterator();
 		while (it.hasNext()) {
 			ClassificationFilterRule rule = it.next();
