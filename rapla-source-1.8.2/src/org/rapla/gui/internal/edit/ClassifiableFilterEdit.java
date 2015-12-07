@@ -110,14 +110,19 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent implements ActionL
 		return types;
 	}
 
-	public void updateCheckboxes(String resourceName) {
+	public Boolean[] updateCheckboxes(String resourceName) {
+		Boolean[] isChecked = new Boolean[checkBoxes.length];
 		for (int i = 0; i < checkBoxes.length; i++) {
 			String checkBoxText = checkBoxes[i].getText();
-			if (checkBoxText.equals(resourceName))
+			if (checkBoxText.equals(resourceName)){
 				checkBoxes[i].setSelected(true);
+				isChecked[i] = true;
+			}
 			else
 				checkBoxes[i].setSelected(false);
+				isChecked[i] = false;
 		}
+		return isChecked;
 	}
 
 	public JComponent getClassificationTitle(String classificationType) {

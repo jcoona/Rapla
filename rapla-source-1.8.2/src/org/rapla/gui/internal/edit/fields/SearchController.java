@@ -100,6 +100,12 @@ private String currentSearch; //what we are searching for at the moment
  		return actualNames;
    }
    
+   public void createRules(String searchChoice){
+	   for (int i = 0; i<resourceList.size(); i++){
+		   
+	   }
+   }
+   
    /**
     * Method is called when user presses enter when typing in search criteria in the search bar.
     * This will go through and search through Rapla.
@@ -119,6 +125,9 @@ private String currentSearch; //what we are searching for at the moment
      
      //Edit the comboboxes
      JComboBox[] attributeSelectors = _filterEdit.getAttributeSelectors();
+     generateResourceList();
+     createRules(searchChoice);
+     
      attributeSelectors[0].setSelectedIndex(0);
      Attribute test =  (Attribute)attributeSelectors[0].getSelectedItem();
      //_filterEdit).autoRuleRow(test);
