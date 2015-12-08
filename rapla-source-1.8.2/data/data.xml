@@ -417,6 +417,14 @@
          <rapla:allocate idref="r6384587-5bb5-481c-860b-706f9525b916"/>
          <rapla:permission group="category[key='read-events-from-others']" access="read"/>
       </rapla:reservation>
+      <rapla:reservation id="ec455b41-6133-401f-b552-8232acd16b87" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-12-08T01:00:51.0534Z" last-changed="2015-12-08T01:01:40.0471Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>get turnt</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a6797d73-1bfb-4f65-a498-58d05ed85688" start-date="2015-09-29" end-date="2015-09-29"/>
+         <rapla:allocate idref="r2b86f8b-8d4b-4238-871f-8abdf8b998a6"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
    </rapla:reservations>
 
 </rapla:data>

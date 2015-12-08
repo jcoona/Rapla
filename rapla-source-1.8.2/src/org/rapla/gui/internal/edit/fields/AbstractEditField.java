@@ -50,7 +50,7 @@ public abstract class AbstractEditField extends RaplaGUIComponent
         return listenerList.toArray(new ChangeListener[]{});
     }
 
-    protected void fireContentChanged() {
+    public void fireContentChanged() {
         if (listenerList.size() == 0)
             return;
         ChangeEvent evt = new ChangeEvent(this);

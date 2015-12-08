@@ -123,8 +123,10 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent implements ActionL
 			else{
 				checkBoxes[i].setSelected(false);
 				isChecked[i] = false;
+				filterEdit[i].mapFrom(null);
 			}
 		}
+		fireFilterChanged();
 		return isChecked;
 	}
 	
@@ -414,6 +416,7 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 					AbstractEditField currentField = currentRuleRow.get(j).getField();
 					JTextField currentTextField = (JTextField) currentField.getComponent();
 					currentTextField.setText(searchText);
+					currentField.fireContentChanged();
 				
 			}
 		}
