@@ -62,6 +62,7 @@ public void pressedEnter(SearchTextField textfield) throws RaplaException
   //Select which resource we are searching by, based on the dropbox value.
   filterEdit.reset();
   Boolean[] isChecked = filterEdit.updateCheckboxes(searchChoice);
+  filterEdit.fireFilterChanged();
   
   //Select all applicable attributes in the attribute selector.
   JComboBox[] attributeSelectors = filterEdit.getAttributeSelectors();

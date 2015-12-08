@@ -156,7 +156,7 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent implements ActionL
 		return listenerList.toArray(new ChangeListener[] {});
 	}
 
-	protected void fireFilterChanged() {
+	public void fireFilterChanged() {
 
 		if (listenerList.size() == 0)
 			return;
@@ -387,8 +387,27 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent implements ActionL
 	}
 	
 	public void reset(){
-		everythingButton.setEnabled(true);
-		everythingButton.setSelected(true);
+		boolean enabled = everythingButton.isEnabled();
+		try {
+			if (!enabled) {
+				return;
+			}
+			enabled = false;
+			JButton source = everythingButton;
+			boolean isEverything = source == everythingButton;
+			source.setSelected(isEverything ? true : false);
+			boolean deselectAllIfFilterIsNull = !isEverything;
+			mapFromIntern(null, deselectAllIfFilterIsNull);
+			fireFilterChanged();
+
+			source.setEnabled(false);
+			JButton opposite = isEverything ? nothingButton : everythingButton;
+			opposite.setEnabled(true);
+		} catch (RaplaException ex) {
+			showException(ex, getComponent());
+		} finally {
+			enabled = true;
+		}
 	}
 
 }
