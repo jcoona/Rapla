@@ -9989,3 +9989,181 @@ java.lang.NullPointerException: null
 22:51:50.707 902227 [main] INFO  rapla.raplafile - Disconnecting: file:/Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/data/data.xml
 22:51:50.708 902228 [main] INFO  rapla.server - Storage service stopped
 22:51:50.847 902367 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.w.WebAppContext{/,[file:/Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/war/]}
+22:59:10.086 442015 [AWT-EventQueue-0] INFO  rapla.client.facade - Logout u405db03-812f-4ff7-b52c-5423a7951cf4
+22:59:10.086 442015 [AWT-EventQueue-0] INFO  rapla.remotestore - Disconnecting from server
+22:59:10.086 442015 [AWT-EventQueue-0] INFO  rapla.server.session.login - Request Logout admin
+22:59:10.089 442018 [main] INFO  rapla - Shutting down rapla-container
+22:59:10.089 442018 [main] INFO  rapla - Stopping scheduler thread.
+22:59:10.090 442019 [main] INFO  rapla - Stopped scheduler thread.
+22:59:10.141 442070 [main] INFO  rapla.raplafile - Disconnecting: file:/Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/data/data.xml
+22:59:10.142 442071 [main] INFO  rapla.server - Storage service stopped
+22:59:10.212 442141 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.w.WebAppContext{/,[file:/Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/war/]}
+22:59:25.559 328  [main] INFO  org.eclipse.jetty.server.Server - jetty-8.1.16.v20140903
+22:59:25.603 372  [main] INFO  o.e.j.d.p.ScanningAppProvider - Deployment monitor /Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/contexts at interval 1
+22:59:25.607 376  [main] INFO  o.e.jetty.deploy.DeploymentManager - Deployable added: /Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/contexts/rapla-develop.xml
+22:59:25.863 632  [main] INFO  rapla - Init RaplaServlet
+22:59:25.865 634  [main] INFO  rapla - Passed JNDI Environment rapladatasource=raplafile env_rapladb=org.hsqldb.jdbc.JDBCDataSource@7ce3cb8e env_raplafile=/Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/data/data.xml
+22:59:25.875 644  [main] INFO  rapla - Logging via SLF4J API.
+22:59:25.932 701  [main] INFO  rapla - Configured Locale= en_US
+22:59:26.078 847  [main] INFO  rapla - Config=file:/Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/war/WEB-INF/raplaserver.xconf
+22:59:26.078 847  [main] INFO  rapla - Rapla.Version=@doc.version@
+22:59:26.078 847  [main] INFO  rapla - Rapla.Build=@doc.buildtime@
+22:59:26.079 848  [main] INFO  rapla - Timezone America/New_York
+22:59:26.090 859  [main] INFO  rapla - Java.Version=1.8.0_20
+22:59:26.136 905  [main] INFO  rapla.server.serverfacade - Using rapladatasource raplafile
+22:59:26.175 944  [main] INFO  rapla.raplafile - Connecting: file:/Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/data/data.xml
+22:59:26.281 1050 [main] INFO  rapla.raplafile - Conflict initialization found 0 conflicts and took 5ms. 
+22:59:26.285 1054 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.weekview.server.WeekViewServerPlugin
+22:59:26.285 1054 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.urlencryption.server.UrlEncryptionServerPlugin
+22:59:26.286 1055 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.timeslot.server.TimeslotServerPlugin
+22:59:26.286 1055 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.tableview.internal.server.TableViewServerPlugin
+22:59:26.287 1056 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.notification.server.NotificationServerPlugin
+22:59:26.287 1056 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.monthview.server.MonthViewServerPlugin
+22:59:26.288 1057 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.mail.server.MailServerPlugin
+22:59:26.288 1057 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.jndi.server.JNDIServerPlugin
+22:59:26.288 1057 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.ical.server.ImportFromICalServerPlugin
+22:59:26.289 1058 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.export2ical.server.Export2iCalServerPlugin
+22:59:26.289 1058 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.eventtimecalculator.server.EventTimeCalculatorServerPlugin
+22:59:26.289 1058 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.dayresource.server.DayResourceViewServerPlugin
+22:59:26.290 1059 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.compactweekview.server.CompactWeekViewServerPlugin
+22:59:26.290 1059 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.autoexport.server.AutoExportServerPlugin
+22:59:26.290 1059 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.archiver.server.ArchiverServerPlugin
+22:59:26.551 1320 [main] INFO  rapla - Rapla server started
+22:59:26.567 1336 [main] INFO  rapla.client - Starting gui 
+22:59:26.618 1387 [main] INFO  rapla.client.facade - Using rapladatasource remotestore
+22:59:26.637 1406 [main] INFO  rapla.remotestore - Connecting to server and starting login..
+22:59:26.640 1409 [main] INFO  rapla.remotestore - login successfull
+22:59:26.645 1414 [main] INFO  rapla.client.facade - Login admin
+22:59:26.651 1420 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+22:59:26.652 1421 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+22:59:26.652 1421 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+22:59:26.652 1421 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.tempatewizard.TempateWizardPlugin
+22:59:26.653 1422 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+22:59:26.653 1422 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+22:59:26.653 1422 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.rightsreport.RightsReportPlugin
+22:59:26.653 1422 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+22:59:26.654 1423 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.notification.NotificationPlugin
+22:59:26.654 1423 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+22:59:26.654 1423 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.mail.MailPlugin
+22:59:26.654 1423 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+22:59:26.654 1423 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.ical.ImportFromICalPlugin
+22:59:26.655 1424 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+22:59:26.655 1424 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+22:59:26.655 1424 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+22:59:26.655 1424 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+22:59:26.655 1424 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+22:59:26.656 1425 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+22:59:26.656 1425 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+22:59:26.656 1425 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
+23:00:07.400 42169 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:00:07.566 42335 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:00:10.151 44920 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:00:10.160 44929 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:00:17.220 51989 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:00:17.228 51997 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:00:18.910 53679 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:00:18.918 53687 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:00:20.464 55233 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:00:20.471 55240 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:00:22.464 57233 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:00:22.471 57240 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:00:23.808 58577 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:00:23.815 58584 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:00:32.781 67550 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:00:32.786 67555 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:00:34.406 69175 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:00:34.412 69181 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:00:35.896 70665 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:00:35.903 70672 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:01:19.856 114625 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:01:19.863 114632 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:03:58.994 273763 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:03:59.002 273771 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:04:44.771 319540 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:04:44.780 319549 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:04:47.611 322380 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:04:47.617 322386 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:04:48.829 323598 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:04:48.835 323604 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:04:51.935 326704 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:04:51.941 326710 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:04:53.475 328244 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:04:53.481 328250 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:05:22.410 357179 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:05:22.419 357188 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:05:25.916 360685 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:05:25.922 360691 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:05:28.408 363177 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:05:28.413 363182 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:06:27.079 421848 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:06:27.088 421857 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:06:29.574 424343 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:06:29.579 424348 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:06:31.513 426282 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:06:31.519 426288 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:06:34.173 428942 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:06:34.179 428948 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:07:10.151 464920 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:07:10.160 464929 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:07:12.973 467742 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:07:12.979 467748 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:07:15.527 470296 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:07:15.533 470302 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:07:46.898 501667 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:07:46.906 501675 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:07:50.985 505754 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:07:50.991 505760 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:07:52.193 506962 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:07:52.199 506968 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:07:54.275 509044 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:07:54.281 509050 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:08:04.037 518806 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:08:04.043 518812 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:08:08.887 523656 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:08:08.893 523662 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:08:11.459 526228 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:08:11.464 526233 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:09:39.400 614169 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:09:39.409 614178 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:09:42.009 616778 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:09:42.015 616784 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:09:43.735 618504 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:09:43.740 618509 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:10:13.747 648516 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:10:13.753 648522 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:10:23.955 658724 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:10:23.961 658730 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:10:26.263 661032 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:10:26.269 661038 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:10:29.445 664214 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:10:29.450 664219 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:10:32.563 667332 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:10:32.568 667337 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:10.909 705678 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:10.926 705695 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:14.609 709378 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:14.614 709383 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:16.595 711364 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:16.600 711369 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:21.548 716317 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:21.554 716323 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:23.676 718445 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:23.682 718451 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:27.655 722424 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:27.660 722429 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:29.208 723977 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:29.214 723983 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:30.681 725450 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:30.686 725455 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:35.354 730123 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:35.360 730129 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:39.138 733907 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:39.143 733912 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:42.510 737279 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:42.516 737285 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:49.034 743803 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:49.043 743812 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:51.834 746603 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:51.839 746608 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
+23:11:57.206 751975 [AWT-EventQueue-0] INFO  rapla.server.session - Dispatching change for user admin
+23:11:57.211 751980 [AWT-EventQueue-0] INFO  rapla.server.session - Change for user admin dispatched.
