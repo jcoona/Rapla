@@ -42,7 +42,11 @@ public class RaplaButton extends JButton {
         }
     }
 
-    public void setAction(Action action) {
+    public RaplaButton() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void setAction(Action action) {
         String oldText = null;
         if (action.getValue(Action.NAME) == null)
             oldText = getText();
@@ -50,10 +54,6 @@ public class RaplaButton extends JButton {
         if (oldText != null)
             setText(oldText);
     }
-    public RaplaButton() {
-    }
-
-
 }
 
 

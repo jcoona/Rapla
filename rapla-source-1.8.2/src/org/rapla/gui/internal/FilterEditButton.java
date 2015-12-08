@@ -42,6 +42,7 @@ public class FilterEditButton extends RaplaGUIComponent
                     popup.setVisible(false);
                     popup= null;
                     filterButton.setChar('v');
+                    searchController.closePopup();
                     return;
                 }
                 try {

@@ -385,6 +385,11 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent implements ActionL
 		}
 		return comboBoxes;
 	}
+	
+	public void reset(){
+		everythingButton.setEnabled(true);
+		everythingButton.setSelected(true);
+	}
 
 }
 

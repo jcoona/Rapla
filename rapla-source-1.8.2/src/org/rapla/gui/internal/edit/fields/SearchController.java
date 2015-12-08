@@ -32,6 +32,7 @@ private ClassifiableFilterEdit filterEdit; //ClassificationFilterEdit in Resourc
 
 private List<DynamicType> resourceList; //resource data structure 
 private SearchResource[] resourceObjects; //resource structure with DynamicType and actual name as values
+boolean isPopupOpen;
 
 /**
  * Main constructor for the class. Will connect to the main software model.
@@ -39,6 +40,7 @@ private SearchResource[] resourceObjects; //resource structure with DynamicType 
  */
 public SearchController(CalendarSelectionModel model, RaplaContext context){
 	super(context);
+	isPopupOpen = false;
   }
 /**
  * This method is executed when the user performs a search.
@@ -58,6 +60,7 @@ public void pressedEnter(SearchTextField textfield) throws RaplaException
   //System.out.println(searchText + " " + searchChoice);
   
   //Select which resource we are searching by, based on the dropbox value.
+  filterEdit.reset();
   Boolean[] isChecked = filterEdit.updateCheckboxes(searchChoice);
   
   //Select all applicable attributes in the attribute selector.
@@ -69,7 +72,8 @@ public void pressedEnter(SearchTextField textfield) throws RaplaException
   filterEdit.setRules(isChecked, searchText);
   
   //And make ClassifiableFilterEdit pop open.
-  makeFilterPopup();
+  if (isPopupOpen == false)
+	  isPopupOpen = makeFilterPopup();
 }
 /**
  * This method creates Resource objects based on what resources are currently present in
@@ -128,8 +132,9 @@ public void createRules(String searchChoice, Boolean[] isChecked, JComboBox[] at
 /**
  * When you make a search the instance of ClassifiableFilterEdit will popup.
  */
-public void makeFilterPopup(){
+public boolean makeFilterPopup(){
 	   filterEditButton.popup();
+	   return true;
    }
 /**
  * This method gets all resource types from the Rapla query.
@@ -155,5 +160,9 @@ public void addFilter(FilterEditButton filterButton){
  */
 public void addResourceDropBox(ResourceDropBox dropbox){
 	  this.dropbox = dropbox;
+}
+
+public void closePopup(){
+	isPopupOpen = false;
 }
 }
