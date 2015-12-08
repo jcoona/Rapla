@@ -51,6 +51,7 @@ private ResourceDropBox _dropbox;
 private RaplaContext _context;
 private ClassifiableFilterEdit _filterEdit;
 private ArrayList<ClassificationFilter> filters;
+private FilterEditButton filterEditButton;
 
 private String currentResourceTitle; //dropbox option we want to search for
 private List<DynamicType> resourceList; //resource data structure based on what rapla designers made
@@ -114,6 +115,10 @@ private String currentSearch; //what we are searching for at the moment
 	   }
    }
    
+   public void makeFilterPopup(){
+	   filterEditButton.popup();
+   }
+   
    /**
     * Method is called when user presses enter when typing in search criteria in the search bar.
     * This will go through and search through Rapla.
@@ -137,39 +142,7 @@ private String currentSearch; //what we are searching for at the moment
      createRules(searchChoice, isChecked, attributeSelectors);
      _filterEdit.setRules(isChecked, searchText);
      
-     //attributeSelectors[0].setSelectedIndex(0);
-     //Attribute test =  (Attribute)attributeSelectors[0].getSelectedItem();
-     //_filterEdit).autoRuleRow(test);
-     //test = (String) attributeSelectors[0].getItemAt(0);
-     
-     //Lets get all the rapla attributes and all the events
-     //List<Attribute> raplaAttributes = generateAttributeList();
-     //List<DynamicType> reservationList = generateReservationList();
-     
-     //Then make a popup come up.
-     //SearchPopup searchResults = new SearchPopup("Search Results");
-     //searchResults.setVisible(true);
-     
-     //Get all the search results
-     //List<DisplayableEvent> searchHits = getSearchResults();
-     
-     //Add the search results to the window
-     //for (int i=0; i<searchHits.size(); i++){//iterates through whole collection of events
-    	 //DisplayableEvent currentHit = searchHits.get(i);
-    	 //String[] attributes = currentHit.getAttributes();
-    	 //int width = 0;
-    	 
-    	 //for (int j = 0; j<currentHit.getLength(); j++){
-    		 //String currentString = attributes[j];
-    		 //EventInfoBox eventBox = new EventInfoBox(currentString);
-    		 //eventBox.setLocation(30*(j+1)+(10*j)+width, 30*(i+1)+(10*i));
-    		 //width += eventBox.getWidth();
-    	 	 //searchResults.add(eventBox);
-    	 //}
-     //}
-     
-     //updateFilters(reservationList, raplaAttributes);
-     //performSearch();
+     makeFilterPopup();
    }
    /**
     * Will get search results. At the moment Just tweaking it to make it display something.
@@ -329,6 +302,7 @@ private String currentSearch; //what we are searching for at the moment
   
   public void addFilter(FilterEditButton filterButton){
 	  _filterEdit = filterButton.getFilterUI();
+	  filterEditButton = filterButton;
   }
 
 public SearchButton getSearchButton() {

@@ -109,4 +109,40 @@ public class FilterEditButton extends RaplaGUIComponent
         return filterButton;
     }
     
+    public void popup(){
+    	if ( popup != null)
+        {
+            popup.setVisible(false);
+            popup= null;
+            filterButton.setChar('v');
+            return;
+        }
+        try {
+            final Point locationOnScreen = filterButton.getLocationOnScreen();
+            final int y = locationOnScreen.y + 18;
+            final int x = locationOnScreen.x;
+            if ( popup == null)
+            {
+            	Component ownerWindow = DialogUI.getOwnerWindow(filterButton);
+            	if ( ownerWindow instanceof Frame)
+            	{
+            		popup = new JWindow((Frame)ownerWindow);
+            	}
+            	else if ( ownerWindow instanceof Dialog)
+            	{
+            		popup = new JWindow((Dialog)ownerWindow);
+            	}
+            }
+            JComponent content = ui.getComponent();
+			popup.setContentPane(content );
+            popup.setSize( content.getPreferredSize());
+            popup.setLocation( x, y);
+            //.getSharedInstance().getPopup( filterButton, ui.getComponent(), x, y);
+            popup.setVisible(true);
+            filterButton.setChar('^');
+        } catch (Exception ex) {
+            showException(ex, getMainComponent());
+        }
+    }
+    
 }

@@ -9752,3 +9752,60 @@ java.lang.NullPointerException: null
 20:43:34.620 374317 [main] INFO  rapla.raplafile - Disconnecting: file:/C:/Users/Adam/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/data/data.xml
 20:43:34.620 374317 [main] INFO  rapla.server - Storage service stopped
 20:43:34.693 374390 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.w.WebAppContext{/,[file:/C:/Users/Adam/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/war/]}
+20:50:48.362 333  [main] INFO  org.eclipse.jetty.server.Server - jetty-8.1.16.v20140903
+20:50:48.406 377  [main] INFO  o.e.j.d.p.ScanningAppProvider - Deployment monitor /Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/contexts at interval 1
+20:50:48.411 382  [main] INFO  o.e.jetty.deploy.DeploymentManager - Deployable added: /Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/contexts/rapla-develop.xml
+20:50:48.660 631  [main] INFO  rapla - Init RaplaServlet
+20:50:48.662 633  [main] INFO  rapla - Passed JNDI Environment rapladatasource=raplafile env_rapladb=org.hsqldb.jdbc.JDBCDataSource@7ce3cb8e env_raplafile=/Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/data/data.xml
+20:50:48.671 642  [main] INFO  rapla - Logging via SLF4J API.
+20:50:48.727 698  [main] INFO  rapla - Configured Locale= en_US
+20:50:48.873 844  [main] INFO  rapla - Config=file:/Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/war/WEB-INF/raplaserver.xconf
+20:50:48.874 845  [main] INFO  rapla - Rapla.Version=@doc.version@
+20:50:48.874 845  [main] INFO  rapla - Rapla.Build=@doc.buildtime@
+20:50:48.874 845  [main] INFO  rapla - Timezone America/New_York
+20:50:48.884 855  [main] INFO  rapla - Java.Version=1.8.0_20
+20:50:48.929 900  [main] INFO  rapla.server.serverfacade - Using rapladatasource raplafile
+20:50:48.969 940  [main] INFO  rapla.raplafile - Connecting: file:/Users/Jackson/git/CSE2102-Fall2015-Claxton-Jackson/rapla-source-1.8.2/data/data.xml
+20:50:49.072 1043 [main] INFO  rapla.raplafile - Conflict initialization found 0 conflicts and took 4ms. 
+20:50:49.076 1047 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.weekview.server.WeekViewServerPlugin
+20:50:49.077 1048 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.urlencryption.server.UrlEncryptionServerPlugin
+20:50:49.078 1049 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.timeslot.server.TimeslotServerPlugin
+20:50:49.078 1049 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.tableview.internal.server.TableViewServerPlugin
+20:50:49.079 1050 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.notification.server.NotificationServerPlugin
+20:50:49.079 1050 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.monthview.server.MonthViewServerPlugin
+20:50:49.079 1050 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.mail.server.MailServerPlugin
+20:50:49.080 1051 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.jndi.server.JNDIServerPlugin
+20:50:49.080 1051 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.ical.server.ImportFromICalServerPlugin
+20:50:49.080 1051 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.export2ical.server.Export2iCalServerPlugin
+20:50:49.081 1052 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.eventtimecalculator.server.EventTimeCalculatorServerPlugin
+20:50:49.081 1052 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.dayresource.server.DayResourceViewServerPlugin
+20:50:49.081 1052 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.compactweekview.server.CompactWeekViewServerPlugin
+20:50:49.082 1053 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.autoexport.server.AutoExportServerPlugin
+20:50:49.082 1053 [main] INFO  rapla.server.plugin - Installed plugin org.rapla.plugin.archiver.server.ArchiverServerPlugin
+20:50:49.341 1312 [main] INFO  rapla - Rapla server started
+20:50:49.356 1327 [main] INFO  rapla.client - Starting gui 
+20:50:49.410 1381 [main] INFO  rapla.client.facade - Using rapladatasource remotestore
+20:50:49.429 1400 [main] INFO  rapla.remotestore - Connecting to server and starting login..
+20:50:49.431 1402 [main] INFO  rapla.remotestore - login successfull
+20:50:49.436 1407 [main] INFO  rapla.client.facade - Login admin
+20:50:49.442 1413 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.weekview.WeekViewPlugin
+20:50:49.443 1414 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.urlencryption.UrlEncryptionPlugin
+20:50:49.443 1414 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.timeslot.TimeslotPlugin
+20:50:49.443 1414 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.tempatewizard.TempateWizardPlugin
+20:50:49.444 1415 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.tableview.internal.TableViewPlugin
+20:50:49.444 1415 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.setowner.SetOwnerPlugin
+20:50:49.444 1415 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.rightsreport.RightsReportPlugin
+20:50:49.444 1415 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.periodcopy.PeriodCopyPlugin
+20:50:49.445 1416 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.notification.NotificationPlugin
+20:50:49.445 1416 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.monthview.MonthViewPlugin
+20:50:49.445 1416 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.mail.MailPlugin
+20:50:49.445 1416 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.jndi.JNDIPlugin
+20:50:49.445 1416 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.ical.ImportFromICalPlugin
+20:50:49.446 1417 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.export2ical.Export2iCalPlugin
+20:50:49.446 1417 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.eventtimecalculator.EventTimeCalculatorPlugin
+20:50:49.446 1417 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.defaultwizard.DefaultWizardPlugin
+20:50:49.446 1417 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.dayresource.DayResourceViewPlugin
+20:50:49.446 1417 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.compactweekview.CompactWeekViewPlugin
+20:50:49.447 1418 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.autoexport.AutoExportPlugin
+20:50:49.447 1418 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.archiver.ArchiverPlugin
+20:50:49.447 1418 [main] INFO  rapla.client.plugin - Installed plugin org.rapla.plugin.appointmentcounter.AppointmentCounterPlugin
