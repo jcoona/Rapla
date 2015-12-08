@@ -1,8 +1,5 @@
 package org.rapla.gui.internal.edit.fields;
 
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-
 import javax.swing.JComboBox;
 /**
  * This class will populate a drop box of all Rapla resources in the resource menu.
@@ -10,8 +7,10 @@ import javax.swing.JComboBox;
  * @author Jackson
  *
  */
+@SuppressWarnings("rawtypes")
 public class ResourceDropBox extends JComboBox{
-	
+
+	private static final long serialVersionUID = 1L;
 	SearchController controller; //its controller
 	String[] menuOptions; //the values in the drop box
 	String currentSelection; //the currently selected value

@@ -1,7 +1,6 @@
 package org.rapla.gui.internal.edit.fields;
 
 import java.awt.Color;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusListener;
 import java.awt.event.KeyEvent;
@@ -14,18 +13,22 @@ import javax.swing.JScrollPane;
 import javax.swing.event.ChangeListener;
 import javax.swing.text.JTextComponent;
 
-import org.rapla.entities.dynamictype.ClassificationFilter;
 import org.rapla.framework.RaplaContext;
 import org.rapla.framework.RaplaException;
 /**
- * Here is an enhancement for faster searching methods. This class
- * generates a text field for the user to type in search criteria.
+ * This will generate a SearchTextField.
+ * 
+ * TextFields are just fields that <i>contain</i> JTextFields. Confusing, but it acts as a container class.
+ * 
+ * This specific extension will work specifically to search through the Rapla calendar for events based on SearchCriteria.
  * @author Connor Jackson, Adam Claxton
  *
  */
 public class SearchTextField extends TextField implements ActionListener,FocusListener,KeyListener, MultiEditField, SetGetField<String>
 {
-
+/**
+ * We supplied all the same member variables at its super.
+ */
 	JTextComponent field;
     JComponent colorPanel;
     JScrollPane scrollPane;
@@ -33,7 +36,7 @@ public class SearchTextField extends TextField implements ActionListener,FocusLi
     JPanel color;
     Object oldValue;
     Color currentColor;
-    SearchController controller;
+    SearchController controller; //has a controller that it connects to
     ChangeListener listener;
 /**
  * Constructor. Will contain a controller that connects it to a search button.	
@@ -67,15 +70,14 @@ public class SearchTextField extends TextField implements ActionListener,FocusLi
     {
     	super(sm, fieldName, rows, columns);
     	this.controller = controller;
-    	controller.addSearchTextField(this);
+    	//controller.addSearchTextField(this);
     	listener=listen;
     }
 /**
- * This method is invoked when a key is released, when typing search criteria
- * into a text field. This is the method that Rapla has been designed to work with in previous
- * functions with a text field, so we chose to leave it that way here.
+ * This method is invoked when a key is released.
  * 
- * This will tell the controller to perform the text entered function, which will pass the input to the search button.
+ * More specifically, it will react greatly when a user types on the "enter" key on the keyboard.
+ * Then, a search will be performed.
  */
     public void keyReleased(KeyEvent evt){
     	//Pressing enter has the same effect as clicking the search button
@@ -89,8 +91,4 @@ public class SearchTextField extends TextField implements ActionListener,FocusLi
     		}
     	}
     }
-public ClassificationFilter[] getFilters() 
-{
-	return controller.getFilters();
-}
 }
