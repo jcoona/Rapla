@@ -38,6 +38,7 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JTextField;
 import javax.swing.JViewport;
 import javax.swing.UIManager;
 import javax.swing.border.Border;
@@ -60,6 +61,7 @@ import org.rapla.framework.RaplaException;
 import org.rapla.gui.EditField;
 import org.rapla.gui.RaplaGUIComponent;
 import org.rapla.gui.internal.common.NamedListCellRenderer;
+import org.rapla.gui.internal.edit.ClassificationEdit.RuleComponent;
 import org.rapla.gui.internal.edit.fields.AbstractEditField;
 import org.rapla.gui.internal.edit.fields.AllocatableSelectField;
 import org.rapla.gui.internal.edit.fields.BooleanField;
@@ -124,6 +126,13 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent implements ActionL
 			}
 		}
 		return isChecked;
+	}
+	
+	public void setRules(Boolean[] isChecked, String searchText){
+		for (int i=0; i<isChecked.length; i++){
+			if (isChecked[i].equals(true))
+				filterEdit[i].setRules(isChecked, searchText);
+		}
 	}
 
 	public JComponent getClassificationTitle(String classificationType) {
@@ -375,11 +384,6 @@ public class ClassifiableFilterEdit extends RaplaGUIComponent implements ActionL
 		return comboBoxes;
 	}
 
-	public void autoRuleRow(Attribute test) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
 
 class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
@@ -400,6 +404,22 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 		ruleListPanel.setLayout(new BoxLayout(ruleListPanel, BoxLayout.Y_AXIS));
 		newPanel.setOpaque(false);
 		newPanel.setLayout(new TableLayout(new double[][] { { TableLayout.PREFERRED }, { TableLayout.PREFERRED } }));
+	}
+
+	public void setRules(Boolean[] isChecked, String searchText) {
+		for (int i=0; i<isChecked.length; i++){
+			if (isChecked[i].equals(true)){
+				RuleComponent currentRule = ruleList.get(i);
+				List<RuleRow> currentRuleRow = currentRule.getRuleRows();
+				for (int j=0; j<currentRuleRow.size(); j++){
+					AbstractEditField currentField = currentRuleRow.get(j).getField();
+					JTextField currentTextField = (JTextField) currentField.getComponent();
+					currentTextField.setText(searchText);
+					
+				}
+			}
+		}
+		
 	}
 
 	public void addChangeListener(ChangeListener listener) {
@@ -576,6 +596,10 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 			filter.setRule(i++, attribute, conditions);
 		}
 		return filter;
+	}
+	
+	public List<RuleComponent> getRuleList(){
+		return ruleList;
 	}
 
 	private RuleComponent getComponent(Attribute attribute) {
@@ -896,6 +920,10 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 			}
 
 			Assert.notNull(field, "Unknown AttributeType");
+			return field;
+		}
+		
+		public AbstractEditField getField(){
 			return field;
 		}
 

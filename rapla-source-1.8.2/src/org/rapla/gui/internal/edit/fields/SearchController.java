@@ -135,6 +135,7 @@ private String currentSearch; //what we are searching for at the moment
      JComboBox[] attributeSelectors = _filterEdit.getAttributeSelectors();
      generateResourceList();
      createRules(searchChoice, isChecked, attributeSelectors);
+     //_filterEdit.setRules(isChecked, searchText);
      
      //attributeSelectors[0].setSelectedIndex(0);
      //Attribute test =  (Attribute)attributeSelectors[0].getSelectedItem();
@@ -142,32 +143,32 @@ private String currentSearch; //what we are searching for at the moment
      //test = (String) attributeSelectors[0].getItemAt(0);
      
      //Lets get all the rapla attributes and all the events
-     List<Attribute> raplaAttributes = generateAttributeList();
-     List<DynamicType> reservationList = generateReservationList();
+     //List<Attribute> raplaAttributes = generateAttributeList();
+     //List<DynamicType> reservationList = generateReservationList();
      
      //Then make a popup come up.
-     SearchPopup searchResults = new SearchPopup("Search Results");
-     searchResults.setVisible(true);
+     //SearchPopup searchResults = new SearchPopup("Search Results");
+     //searchResults.setVisible(true);
      
      //Get all the search results
-     List<DisplayableEvent> searchHits = getSearchResults();
+     //List<DisplayableEvent> searchHits = getSearchResults();
      
      //Add the search results to the window
-     for (int i=0; i<searchHits.size(); i++){//iterates through whole collection of events
-    	 DisplayableEvent currentHit = searchHits.get(i);
-    	 String[] attributes = currentHit.getAttributes();
-    	 int width = 0;
+     //for (int i=0; i<searchHits.size(); i++){//iterates through whole collection of events
+    	 //DisplayableEvent currentHit = searchHits.get(i);
+    	 //String[] attributes = currentHit.getAttributes();
+    	 //int width = 0;
     	 
-    	 for (int j = 0; j<currentHit.getLength(); j++){
-    		 String currentString = attributes[j];
-    		 EventInfoBox eventBox = new EventInfoBox(currentString);
-    		 eventBox.setLocation(30*(j+1)+(10*j)+width, 30*(i+1)+(10*i));
-    		 width += eventBox.getWidth();
-    	 	 searchResults.add(eventBox);
-    	 }
-     }
+    	 //for (int j = 0; j<currentHit.getLength(); j++){
+    		 //String currentString = attributes[j];
+    		 //EventInfoBox eventBox = new EventInfoBox(currentString);
+    		 //eventBox.setLocation(30*(j+1)+(10*j)+width, 30*(i+1)+(10*i));
+    		 //width += eventBox.getWidth();
+    	 	 //searchResults.add(eventBox);
+    	 //}
+     //}
      
-     updateFilters(reservationList, raplaAttributes);
+     //updateFilters(reservationList, raplaAttributes);
      //performSearch();
    }
    /**
