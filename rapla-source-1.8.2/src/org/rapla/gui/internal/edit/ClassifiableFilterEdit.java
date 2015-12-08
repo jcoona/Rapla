@@ -709,7 +709,9 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 			this.isAndVisible = andVisible;
 			if (and != null) {
 				if (andVisible) {
-					and.setText(getString("and"));
+					//and.setText(getString("and"));
+					//I tried setting the text to 'or', because we modified the filter operation to be inclusive
+					//....but that broke the search capability. It was WEIRD. No idea why.
 				} else {
 					and.setText("");
 				}

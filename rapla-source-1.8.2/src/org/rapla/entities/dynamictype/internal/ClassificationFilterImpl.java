@@ -221,17 +221,17 @@ public final class ClassificationFilterImpl
     				boolean matchesOne= false;
     				for (Object value: values)
     				{
-    					if (rule.matches( value))
-    						matchesOne = true;
+    					if (rule.matches( value) )
+    						return true; //matchesOne = true;		//This is intended to make a filter yield the union of its rules, rather than the intersection
     				}
-    				if ( !matchesOne )
+    				if ( false)//!matchesOne )
     				{
     					return false;
     				}
 				}
 			}
         }
-        return true;
+        return false;//true;
     }
 
     boolean hasType(DynamicType type) {
