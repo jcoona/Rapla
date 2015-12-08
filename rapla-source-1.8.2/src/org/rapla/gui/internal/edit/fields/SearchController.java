@@ -73,7 +73,7 @@ public void pressedEnter(SearchTextField textfield) throws RaplaException
   filterEdit.setRules(isChecked, searchText);
   
   //And make ClassifiableFilterEdit pop open.
-  if (isPopupOpen == false);
+  //if (isPopupOpen == false)
 	  //isPopupOpen = makeFilterPopup(); No longer needed!
 }
 /**
@@ -162,8 +162,11 @@ public void addFilter(FilterEditButton filterButton){
 public void addResourceDropBox(ResourceDropBox dropbox){
 	  this.dropbox = dropbox;
 }
-
-public void closePopup(){
-	isPopupOpen = false;
+/**
+ * Getter.
+ * @return
+ */
+public ClassifiableFilterEdit getFilter(){
+	return filterEdit;
 }
 }

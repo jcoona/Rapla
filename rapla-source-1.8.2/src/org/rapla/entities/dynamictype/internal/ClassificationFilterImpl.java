@@ -202,6 +202,8 @@ public final class ClassificationFilterImpl
         if (!getType().equals(classification.getType()))
             return false;
         ClassificationFilterRuleImpl[] rules = getRules();
+        if (rules.length == 0)
+        	return true;
         for (int i=0;i<rules.length;i++) {
             ClassificationFilterRuleImpl rule = rules[i];
 			Attribute attribute = rule.getAttribute();
@@ -222,16 +224,17 @@ public final class ClassificationFilterImpl
     				for (Object value: values)
     				{
     					if (rule.matches( value) )
-    						return true; //matchesOne = true;		//This is intended to make a filter yield the union of its rules, rather than the intersection
+    					return true; 
+    							//This is intended to make a filter yield the union of its rules, rather than the intersection
     				}
-    				if ( false)//!matchesOne )
+    				if (false)
     				{
     					return false;
     				}
 				}
 			}
         }
-        return false;//true;
+        return false;
     }
 
     boolean hasType(DynamicType type) {

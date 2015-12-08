@@ -77,6 +77,7 @@ public class SearchTextField extends TextField implements ActionListener,FocusLi
  * This method is invoked when a key is released.
  * 
  * More specifically, it will react greatly when a user types on the "enter" key on the keyboard.
+ * AND EVEN MORE SO, when there is no text in the field, the calendar will be reset and every event is thus displayed.
  * Then, a search will be performed.
  */
     public void keyReleased(KeyEvent evt){
@@ -90,5 +91,7 @@ public class SearchTextField extends TextField implements ActionListener,FocusLi
     			e.printStackTrace();
     		}
     	}
+    	else if (this.getValue().equals(""))
+    		controller.getFilter().reset();
     }
 }
