@@ -135,7 +135,7 @@ private String currentSearch; //what we are searching for at the moment
      JComboBox[] attributeSelectors = _filterEdit.getAttributeSelectors();
      generateResourceList();
      createRules(searchChoice, isChecked, attributeSelectors);
-     //_filterEdit.setRules(isChecked, searchText);
+     _filterEdit.setRules(isChecked, searchText);
      
      //attributeSelectors[0].setSelectedIndex(0);
      //Attribute test =  (Attribute)attributeSelectors[0].getSelectedItem();

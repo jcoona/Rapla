@@ -407,16 +407,14 @@ class ClassificationEdit extends RaplaGUIComponent implements ItemListener {
 	}
 
 	public void setRules(Boolean[] isChecked, String searchText) {
-		for (int i=0; i<isChecked.length; i++){
-			if (isChecked[i].equals(true)){
+		for (int i=0; i<ruleList.size(); i++){
 				RuleComponent currentRule = ruleList.get(i);
 				List<RuleRow> currentRuleRow = currentRule.getRuleRows();
 				for (int j=0; j<currentRuleRow.size(); j++){
 					AbstractEditField currentField = currentRuleRow.get(j).getField();
 					JTextField currentTextField = (JTextField) currentField.getComponent();
 					currentTextField.setText(searchText);
-					
-				}
+				
 			}
 		}
 		
