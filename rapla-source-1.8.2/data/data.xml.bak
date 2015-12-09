@@ -271,6 +271,13 @@
          </dynatt:resource1>
          <rapla:permission access="allocate_conflicts"/>
       </rapla:resource>
+      <rapla:resource id="rff48620-324d-4638-977d-08164236010e" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-12-09T14:44:42.0746Z" last-changed="2015-12-09T14:44:52.0670Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:resource1>
+            <dynatt:name>Connor's House</dynatt:name>
+            <dynatt:room>Bedroom</dynatt:room>
+         </dynatt:resource1>
+         <rapla:permission access="allocate_conflicts"/>
+      </rapla:resource>
       <rapla:resource id="r1bbedc7-cf3a-4db6-b817-c2a750543755" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-09-30T19:59:52.0182Z" last-changed="2015-09-30T20:00:03.0184Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
          <dynatt:resource2>
             <dynatt:goals>Needs to be Completed</dynatt:goals>
@@ -487,11 +494,11 @@
          <rapla:allocate idref="r1bbedc7-cf3a-4db6-b817-c2a750543755"/>
          <rapla:permission group="category[key='read-events-from-others']" access="read"/>
       </rapla:reservation>
-      <rapla:reservation id="ecc5ac26-3b6d-46b4-91bd-faff0119f4f7" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-12-08T04:06:48.0412Z" last-changed="2015-12-08T04:07:15.0528Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+      <rapla:reservation id="ecc5ac26-3b6d-46b4-91bd-faff0119f4f7" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-12-08T04:06:48.0412Z" last-changed="2015-12-08T04:11:57.0206Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
          <dynatt:event>
             <dynatt:name>Smash Bros Tournament</dynatt:name>
          </dynatt:event>
-         <rapla:appointment id="a0a5c3e5-27e8-4c19-a666-85a03d7f47c4" start-date="2015-12-12" start-time="15:30:00" end-date="2015-12-12" end-time="18:30:00"/>
+         <rapla:appointment id="a0a5c3e5-27e8-4c19-a666-85a03d7f47c4" start-date="2015-12-12" start-time="15:30:00" end-date="2015-12-12" end-time="19:00:00"/>
          <rapla:allocate idref="rfd670f2-fc57-43c3-bdd3-51bbd246f92b"/>
          <rapla:allocate idref="r1bbedc7-cf3a-4db6-b817-c2a750543755"/>
          <rapla:allocate idref="r9e75507-3dc1-4860-bf7f-43198f8ce2d4"/>
@@ -535,6 +542,14 @@
          <rapla:allocate idref="re54c5f0-fb3a-4c55-9b35-5d001e3fdfd6"/>
          <rapla:allocate idref="r8bf75a5-393f-4b0a-bf43-cb4e1845ab55"/>
          <rapla:allocate idref="r9427474-3f82-4624-adf1-c4f3d7948e55"/>
+         <rapla:permission group="category[key='read-events-from-others']" access="read"/>
+      </rapla:reservation>
+      <rapla:reservation id="e3320ee5-4196-4318-96cc-168ab5841986" owner="u405db03-812f-4ff7-b52c-5423a7951cf4" created-at="2015-12-09T14:45:55.0623Z" last-changed="2015-12-09T14:46:14.0858Z" last-changed-by="u405db03-812f-4ff7-b52c-5423a7951cf4">
+         <dynatt:event>
+            <dynatt:name>Party!</dynatt:name>
+         </dynatt:event>
+         <rapla:appointment id="a9029ad3-3eb4-4418-a51b-4321a6c2e476" start-date="2015-12-08" start-time="09:00:00" end-date="2015-12-08" end-time="11:15:00"/>
+         <rapla:allocate idref="rff48620-324d-4638-977d-08164236010e"/>
          <rapla:permission group="category[key='read-events-from-others']" access="read"/>
       </rapla:reservation>
    </rapla:reservations>

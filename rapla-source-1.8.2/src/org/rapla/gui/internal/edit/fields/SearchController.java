@@ -61,7 +61,16 @@ public void pressedEnter(SearchTextField textfield) throws RaplaException
   
   //Select which resource we are searching by, based on the dropbox value.
   filterEdit.reset();
-  Boolean[] isChecked = filterEdit.updateCheckboxes(searchChoice);
+  //if we don't search all, do a one resource search
+  Boolean[] isChecked = new Boolean[filterEdit.getCheckBoxes().length];
+  if (!searchChoice.equals("Search All")){
+	  isChecked = filterEdit.updateCheckboxes(searchChoice);
+  }
+  //otherwise, leave all checkboxes marked off. Reset was just called, so all the checkboxes are checked off at the moment
+  else{
+	  for (int i=0; i<isChecked.length; i++)
+		  isChecked[i] = true;
+  }
   filterEdit.fireFilterChanged();
   
   //Select all applicable attributes in the attribute selector.

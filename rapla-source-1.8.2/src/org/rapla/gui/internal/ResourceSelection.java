@@ -100,7 +100,13 @@ public class ResourceSelection extends RaplaGUIComponent implements RaplaWidget 
         
         filterEdit = new FilterEditButton(context, model, listener,true, enhancementController);
         searchTextField = new SearchTextField(context, listener, enhancementController);
-        dropbox = new ResourceDropBox(enhancementController.getResourceNames(),enhancementController);
+        
+        String[] searchAll = {"Search All"};
+        dropbox = new ResourceDropBox(searchAll,enhancementController);
+        String[] restOfSearchResources = enhancementController.getResourceNames();
+        for (int i=0; i<restOfSearchResources.length; i++)
+        	dropbox.addItem(restOfSearchResources[i]);
+
         
         buttonsPanel.add(filterEdit.getButton(), BorderLayout.SOUTH);
         buttonsPanel.add(searchTextField.getComponent(), BorderLayout.CENTER);
