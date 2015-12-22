@@ -1,6 +1,6 @@
-# CSE2102-Fall2015-Claxton-Jackson
 #Rapla
 #Faster Resource Search
+#(C) Christopher Kohlhaas, Martin Geuer 2015
 
 #Check out the powerpoint in rapla/Enhancement Artifacts to see a nice example of how to use our enhancement effectively!
 
