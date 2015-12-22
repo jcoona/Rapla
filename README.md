@@ -1,5 +1,6 @@
 #Rapla
 (C) Christopher Kohlhaas, Martin Geuer 2015
+
 Faster Resource Search by Adam Claxton and Connor Jackson
 
 Check out the powerpoint in rapla/Enhancement Artifacts to see a nice example of how to use our enhancement effectively!
